@@ -10,7 +10,7 @@ class SplashPage extends StatelessWidget {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await Future.delayed(const Duration(seconds: 3));
       // ignore: use_build_context_synchronously
-      context.router.push(const StartRoute());
+      context.router.replaceAll([const StartRoute()]);
     });
     return Scaffold(
       body: Center(

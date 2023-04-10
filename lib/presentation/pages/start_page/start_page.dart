@@ -1,5 +1,7 @@
-import 'package:chateo/presentation/core/colors.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:chateo/presentation/core/constants.dart';
+import 'package:chateo/presentation/router/app_router.gr.dart';
+import 'package:chateo/presentation/widgets/large_button.dart';
 import 'package:flutter/material.dart';
 
 class StartPage extends StatelessWidget {
@@ -7,11 +9,11 @@ class StartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Brightness currentBrightness = MediaQuery.of(context).platformBrightness;
-    bool isDarkMode = currentBrightness == Brightness.dark;
-    TextStyle? headLine = Theme.of(context).textTheme.headlineSmall;
-    TextStyle? titleMedium = Theme.of(context).textTheme.titleMedium;
-    TextStyle? titleLarge = Theme.of(context).textTheme.titleLarge;
+    final Brightness currentBrightness =
+        MediaQuery.of(context).platformBrightness;
+    final bool isDarkMode = currentBrightness == Brightness.dark;
+    final TextStyle? headLine = Theme.of(context).textTheme.headlineSmall;
+    final TextStyle? titleMedium = Theme.of(context).textTheme.titleMedium;
 
     return Scaffold(
       body: SafeArea(
@@ -48,31 +50,12 @@ class StartPage extends StatelessWidget {
                 style: titleMedium,
               ),
               kHeight20,
-              Container(
-                margin: const EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                  bottom: 40,
-                ),
-                width: double.infinity,
-                height: 60,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                    ),
-                  ),
-                  child: Text(
-                    'Start Messaging',
-                    style: titleLarge?.copyWith(
-                      color: lightColor,
-                    ),
-                  ),
-                ),
-              )
+              LargeButton(
+                text: 'Start Messaging',
+                onPressed: () {
+                  context.router.push(const PhoneNumberRoute());
+                },
+              ),
             ],
           ),
         ),
