@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:chateo/presentation/pages/login_page/otp_input_page.dart';
 import 'package:chateo/presentation/pages/login_page/phone_number_page.dart';
 import 'package:chateo/presentation/pages/splash_page/splash_page.dart';
 import 'package:chateo/presentation/pages/start_page/start_page.dart';
@@ -16,6 +17,10 @@ import 'package:chateo/presentation/pages/start_page/start_page.dart';
     ),
     CustomRoute(
       page: PhoneNumberPage,
+      transitionsBuilder: TransitionsBuilders.slideLeft,
+    ),
+    CustomRoute(
+      page: OtpInputPage,
       transitionsBuilder: TransitionsBuilders.slideLeft,
     ),
   ],

@@ -1,18 +1,16 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:chateo/presentation/core/constants.dart';
-import 'package:chateo/presentation/pages/login_page/widgets/country_code_selector.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/number_keyboard.dart';
-import 'package:chateo/presentation/pages/login_page/widgets/phone_input_field.dart';
-import 'package:chateo/presentation/router/app_router.gr.dart';
-import 'package:chateo/presentation/widgets/large_button.dart';
+import 'package:chateo/presentation/pages/login_page/widgets/otp_input_field.dart';
 import 'package:flutter/material.dart';
 
-class PhoneNumberPage extends StatelessWidget {
-  const PhoneNumberPage({super.key});
+class OtpInputPage extends StatelessWidget {
+  const OtpInputPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final TextStyle? headLine = Theme.of(context).textTheme.headlineSmall;
+    final TextStyle? titleText = Theme.of(context).textTheme.titleMedium;
+    final TextEditingController pinController = TextEditingController();
 
     return Scaffold(
       body: SafeArea(
@@ -29,7 +27,7 @@ class PhoneNumberPage extends StatelessWidget {
                     children: [
                       kHeight50,
                       Text(
-                        'Enter Your Phone Number',
+                        'Enter Code',
                         style: headLine?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -37,21 +35,15 @@ class PhoneNumberPage extends StatelessWidget {
                       ),
                       kHeight,
                       const Text(
-                        'Please confirm your country code and enter your phone number',
+                        'We have sent you an SMS with the code \n to +62 1309 - 1710 - 1920',
                         style: TextStyle(
                           height: 2,
                         ),
                         textAlign: TextAlign.center,
                       ),
                       kHeight30,
-                      Row(
-                        children: const [
-                          CountryCodeSelector(),
-                          kWidth,
-                          Expanded(
-                            child: PhoneInputField(),
-                          ),
-                        ],
+                      OtpInputField(
+                        controller: pinController,
                       ),
                       kHeight50,
                     ],
@@ -59,11 +51,17 @@ class PhoneNumberPage extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              LargeButton(
-                text: 'Continue',
-                onPressed: () {
-                  context.router.push(const OtpInputRoute());
-                },
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: 10),
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Resend Code',
+                    style: titleText?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ),
               NumberKeyboard(
                 onKeyPressed: (value) {},

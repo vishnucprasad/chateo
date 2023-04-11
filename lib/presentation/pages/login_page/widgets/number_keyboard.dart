@@ -49,6 +49,10 @@ class NumberKeyboard extends StatelessWidget {
                 height: 75,
                 width: 75,
                 child: MaterialButton(
+                  shape: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(37.5),
+                    borderSide: BorderSide.none,
+                  ),
                   onPressed: () {
                     onKeyPressed("");
                   },
@@ -70,6 +74,10 @@ class NumberKeyboard extends StatelessWidget {
       height: 75,
       width: 75,
       child: MaterialButton(
+        shape: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(37.5),
+          borderSide: BorderSide.none,
+        ),
         onPressed: () {
           onKeyPressed(key);
         },
