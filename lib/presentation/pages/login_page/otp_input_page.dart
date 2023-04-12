@@ -2,6 +2,7 @@ import 'package:chateo/presentation/core/constants.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/number_keyboard.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/otp_input_field.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 
 class OtpInputPage extends StatelessWidget {
   const OtpInputPage({super.key});
@@ -64,7 +65,12 @@ class OtpInputPage extends StatelessWidget {
                 ),
               ),
               NumberKeyboard(
-                onKeyPressed: (value) {},
+                onKeyPressed: (value) {
+                  pinController.append(value, 4);
+                },
+                onBackspacePressed: () {
+                  pinController.delete();
+                },
               )
             ],
           ),

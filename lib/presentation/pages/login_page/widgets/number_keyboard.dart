@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 
 class NumberKeyboard extends StatelessWidget {
   final ValueChanged<String> onKeyPressed;
+  final void Function()? onBackspacePressed;
 
-  const NumberKeyboard({super.key, required this.onKeyPressed});
+  const NumberKeyboard({
+    super.key,
+    required this.onKeyPressed,
+    required this.onBackspacePressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -53,9 +58,7 @@ class NumberKeyboard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(37.5),
                     borderSide: BorderSide.none,
                   ),
-                  onPressed: () {
-                    onKeyPressed("");
-                  },
+                  onPressed: onBackspacePressed,
                   child: const Icon(
                     Icons.backspace_outlined,
                     size: 24,

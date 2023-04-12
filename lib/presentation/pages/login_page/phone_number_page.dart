@@ -5,7 +5,9 @@ import 'package:chateo/presentation/pages/login_page/widgets/number_keyboard.dar
 import 'package:chateo/presentation/pages/login_page/widgets/phone_input_field.dart';
 import 'package:chateo/presentation/router/app_router.gr.dart';
 import 'package:chateo/presentation/widgets/large_button.dart';
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 
 class PhoneNumberPage extends StatelessWidget {
   const PhoneNumberPage({super.key});
@@ -13,6 +15,7 @@ class PhoneNumberPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextStyle? headLine = Theme.of(context).textTheme.headlineSmall;
+    final TextEditingController controller = TextEditingController();
 
     return Scaffold(
       body: SafeArea(
@@ -45,11 +48,15 @@ class PhoneNumberPage extends StatelessWidget {
                       ),
                       kHeight30,
                       Row(
-                        children: const [
-                          CountryCodeSelector(),
+                        children: [
+                          CountryCodeSelector(
+                            onChanged: (CountryCode countryCode) {},
+                          ),
                           kWidth,
                           Expanded(
-                            child: PhoneInputField(),
+                            child: PhoneInputField(
+                              controller: controller,
+                            ),
                           ),
                         ],
                       ),
@@ -66,7 +73,15 @@ class PhoneNumberPage extends StatelessWidget {
                 },
               ),
               NumberKeyboard(
-                onKeyPressed: (value) {},
+                onKeyPressed: (value) {
+                  controller.append(
+                    value,
+                    15,
+                  );
+                },
+                onBackspacePressed: () {
+                  controller.delete();
+                },
               )
             ],
           ),

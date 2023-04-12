@@ -5,8 +5,11 @@ import '../../../core/colors.dart';
 
 class CountryCodeSelector extends StatelessWidget {
   const CountryCodeSelector({
+    required this.onChanged,
     super.key,
   });
+
+  final void Function(CountryCode)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class CountryCodeSelector extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: CountryCodePicker(
-        onChanged: print,
+        onChanged: onChanged,
         initialSelection: 'IN',
         favorite: const ['+91', 'IN'],
         showCountryOnly: true,
@@ -30,6 +33,7 @@ class CountryCodeSelector extends StatelessWidget {
         alignLeft: false,
         textStyle: titleSmall?.copyWith(
           fontWeight: FontWeight.bold,
+          color: isDarkMode ? lightColor : greyColor,
         ),
         backgroundColor: lightColor,
         dialogBackgroundColor:

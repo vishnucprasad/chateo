@@ -5,8 +5,10 @@ import '../../../core/colors.dart';
 class PhoneInputField extends StatelessWidget {
   const PhoneInputField({
     super.key,
+    required this.controller,
   });
 
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     final Brightness currentBrightness =
@@ -17,12 +19,13 @@ class PhoneInputField extends StatelessWidget {
     return SizedBox(
       height: 50,
       child: TextFormField(
+        controller: controller,
         readOnly: true,
         decoration: InputDecoration(
           hintText: 'Phone Number',
           hintStyle: titleSmall?.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+              fontWeight: FontWeight.bold,
+              color: isDarkMode ? lightColor : greyColor),
           filled: true,
           fillColor: isDarkMode ? secondaryDarkColor : secondaryLightColor,
           border: OutlineInputBorder(

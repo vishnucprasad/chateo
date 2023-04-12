@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:chateo/presentation/core/colors.dart';
+import 'package:chateo/presentation/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
@@ -41,6 +43,20 @@ class OtpInputField extends StatelessWidget {
       ),
       controller: controller,
       readOnly: true,
+      pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+      validator: (pin) {
+        final otp =
+            '${DateTime.now().day.toString().padLeft(2, '0')}${DateTime.now().month.toString().padLeft(2, '0')}';
+
+        if (pin == otp) {
+          context.router.replaceAll([
+            const StartRoute(),
+            const ProfileCompletionRoute(),
+          ]);
+        }
+
+        return null;
+      },
     );
   }
 }

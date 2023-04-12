@@ -5,6 +5,7 @@ const lightColor = Color(0xffFFFFFF);
 const darkColor = Color(0xff0F1828);
 const secondaryLightColor = Color(0xffF7F7FC);
 const secondaryDarkColor = Color(0xff152033);
+const greyColor = Color(0xffADB5BD);
 
 const primarySwatch = MaterialColor(
   0xff002DE3,
