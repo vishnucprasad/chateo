@@ -1,4 +1,3 @@
-import 'package:chateo/presentation/core/colors.dart';
 import 'package:chateo/presentation/pages/home_page/screens/chat_screen/chat_screen.dart';
 import 'package:chateo/presentation/pages/home_page/screens/contacts_screen/contacts_screen.dart';
 import 'package:chateo/presentation/pages/home_page/screens/more_actions_screen/more_actions_screen.dart';
@@ -14,7 +13,7 @@ class HomePage extends StatelessWidget {
         .textTheme
         .titleMedium
         ?.copyWith(fontWeight: FontWeight.bold);
-    final ValueNotifier indexNotifier = ValueNotifier(0);
+    final ValueNotifier indexNotifier = ValueNotifier(1);
     const List<Widget> screensList = [
       ContactsScreen(),
       ChatScreen(),
