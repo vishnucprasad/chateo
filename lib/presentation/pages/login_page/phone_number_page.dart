@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:chateo/application/auth/auth_bloc.dart';
 import 'package:chateo/presentation/core/constants.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/country_code_selector.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/number_keyboard.dart';
@@ -7,6 +8,7 @@ import 'package:chateo/presentation/router/app_router.gr.dart';
 import 'package:chateo/presentation/widgets/large_button.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinput/pinput.dart';
 
 class PhoneNumberPage extends StatelessWidget {
@@ -50,7 +52,13 @@ class PhoneNumberPage extends StatelessWidget {
                       Row(
                         children: [
                           CountryCodeSelector(
-                            onChanged: (CountryCode countryCode) {},
+                            onChanged: (CountryCode countryCode) {
+                              context
+                                  .read<AuthBloc>()
+                                  .add(AuthEvent.countryCodeChanged(
+                                    countryCode.dialCode,
+                                  ));
+                            },
                           ),
                           kWidth,
                           Expanded(
@@ -78,9 +86,15 @@ class PhoneNumberPage extends StatelessWidget {
                     value,
                     15,
                   );
+                  context
+                      .read<AuthBloc>()
+                      .add(AuthEvent.phoneChanged(controller.text));
                 },
                 onBackspacePressed: () {
                   controller.delete();
+                  context
+                      .read<AuthBloc>()
+                      .add(AuthEvent.phoneChanged(controller.text));
                 },
               )
             ],
