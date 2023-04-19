@@ -1,7 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/colors.dart';
+import '../../../../core/colors.dart';
 
 class CountryCodeSelector extends StatelessWidget {
   const CountryCodeSelector({

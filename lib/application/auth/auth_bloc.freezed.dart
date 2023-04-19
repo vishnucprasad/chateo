@@ -20,18 +20,21 @@ mixin _$AuthEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String phone) phoneChanged,
     required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String phone)? phoneChanged,
     TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String phone)? phoneChanged,
     TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$AuthEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_PhoneChanged value) phoneChanged,
     required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PhoneChanged value)? phoneChanged,
     TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PhoneChanged value)? phoneChanged,
     TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,6 +153,7 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
   TResult when<TResult extends Object?>({
     required TResult Function(String phone) phoneChanged,
     required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
   }) {
     return phoneChanged(phone);
   }
@@ -156,6 +163,7 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String phone)? phoneChanged,
     TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
   }) {
     return phoneChanged?.call(phone);
   }
@@ -165,6 +173,7 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String phone)? phoneChanged,
     TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
     required TResult orElse(),
   }) {
     if (phoneChanged != null) {
@@ -178,6 +187,7 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_PhoneChanged value) phoneChanged,
     required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
   }) {
     return phoneChanged(this);
   }
@@ -187,6 +197,7 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PhoneChanged value)? phoneChanged,
     TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
   }) {
     return phoneChanged?.call(this);
   }
@@ -196,6 +207,7 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PhoneChanged value)? phoneChanged,
     TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
     required TResult orElse(),
   }) {
     if (phoneChanged != null) {
@@ -292,6 +304,7 @@ class _$_CountryCodeChanged
   TResult when<TResult extends Object?>({
     required TResult Function(String phone) phoneChanged,
     required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
   }) {
     return countryCodeChanged(countryCode);
   }
@@ -301,6 +314,7 @@ class _$_CountryCodeChanged
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String phone)? phoneChanged,
     TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
   }) {
     return countryCodeChanged?.call(countryCode);
   }
@@ -310,6 +324,7 @@ class _$_CountryCodeChanged
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String phone)? phoneChanged,
     TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
     required TResult orElse(),
   }) {
     if (countryCodeChanged != null) {
@@ -323,6 +338,7 @@ class _$_CountryCodeChanged
   TResult map<TResult extends Object?>({
     required TResult Function(_PhoneChanged value) phoneChanged,
     required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
   }) {
     return countryCodeChanged(this);
   }
@@ -332,6 +348,7 @@ class _$_CountryCodeChanged
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PhoneChanged value)? phoneChanged,
     TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
   }) {
     return countryCodeChanged?.call(this);
   }
@@ -341,6 +358,7 @@ class _$_CountryCodeChanged
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PhoneChanged value)? phoneChanged,
     TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
     required TResult orElse(),
   }) {
     if (countryCodeChanged != null) {
@@ -361,6 +379,120 @@ abstract class _CountryCodeChanged implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$_VerifyPhoneCopyWith<$Res> {
+  factory _$$_VerifyPhoneCopyWith(
+          _$_VerifyPhone value, $Res Function(_$_VerifyPhone) then) =
+      __$$_VerifyPhoneCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_VerifyPhoneCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_VerifyPhone>
+    implements _$$_VerifyPhoneCopyWith<$Res> {
+  __$$_VerifyPhoneCopyWithImpl(
+      _$_VerifyPhone _value, $Res Function(_$_VerifyPhone) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
+  const _$_VerifyPhone();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.verifyPhone()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AuthEvent.verifyPhone'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_VerifyPhone);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+  }) {
+    return verifyPhone();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+  }) {
+    return verifyPhone?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    required TResult orElse(),
+  }) {
+    if (verifyPhone != null) {
+      return verifyPhone();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+  }) {
+    return verifyPhone(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+  }) {
+    return verifyPhone?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    required TResult orElse(),
+  }) {
+    if (verifyPhone != null) {
+      return verifyPhone(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VerifyPhone implements AuthEvent {
+  const factory _VerifyPhone() = _$_VerifyPhone;
+}
+
+/// @nodoc
 mixin _$AuthState {
   bool get isLoadig => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
@@ -368,6 +500,7 @@ mixin _$AuthState {
   String? get phone => throw _privateConstructorUsedError;
   String? get otp => throw _privateConstructorUsedError;
   Auth? get auth => throw _privateConstructorUsedError;
+  String? get error => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, dynamic>> get authOption =>
       throw _privateConstructorUsedError;
 
@@ -388,6 +521,7 @@ abstract class $AuthStateCopyWith<$Res> {
       String? phone,
       String? otp,
       Auth? auth,
+      String? error,
       Option<Either<AuthFailure, dynamic>> authOption});
 
   $AuthCopyWith<$Res>? get auth;
@@ -412,6 +546,7 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
     Object? phone = freezed,
     Object? otp = freezed,
     Object? auth = freezed,
+    Object? error = freezed,
     Object? authOption = null,
   }) {
     return _then(_value.copyWith(
@@ -439,6 +574,10 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as Auth?,
+      error: freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String?,
       authOption: null == authOption
           ? _value.authOption
           : authOption // ignore: cast_nullable_to_non_nullable
@@ -473,6 +612,7 @@ abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
       String? phone,
       String? otp,
       Auth? auth,
+      String? error,
       Option<Either<AuthFailure, dynamic>> authOption});
 
   @override
@@ -496,6 +636,7 @@ class __$$_AuthStateCopyWithImpl<$Res>
     Object? phone = freezed,
     Object? otp = freezed,
     Object? auth = freezed,
+    Object? error = freezed,
     Object? authOption = null,
   }) {
     return _then(_$_AuthState(
@@ -523,6 +664,10 @@ class __$$_AuthStateCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as Auth?,
+      error: freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String?,
       authOption: null == authOption
           ? _value.authOption
           : authOption // ignore: cast_nullable_to_non_nullable
@@ -541,6 +686,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       required this.phone,
       required this.otp,
       required this.auth,
+      required this.error,
       required this.authOption});
 
   @override
@@ -556,11 +702,13 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
   @override
   final Auth? auth;
   @override
+  final String? error;
+  @override
   final Option<Either<AuthFailure, dynamic>> authOption;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthState(isLoadig: $isLoadig, isError: $isError, countryCode: $countryCode, phone: $phone, otp: $otp, auth: $auth, authOption: $authOption)';
+    return 'AuthState(isLoadig: $isLoadig, isError: $isError, countryCode: $countryCode, phone: $phone, otp: $otp, auth: $auth, error: $error, authOption: $authOption)';
   }
 
   @override
@@ -574,6 +722,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       ..add(DiagnosticsProperty('phone', phone))
       ..add(DiagnosticsProperty('otp', otp))
       ..add(DiagnosticsProperty('auth', auth))
+      ..add(DiagnosticsProperty('error', error))
       ..add(DiagnosticsProperty('authOption', authOption));
   }
 
@@ -590,13 +739,14 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.otp, otp) || other.otp == otp) &&
             (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.error, error) || other.error == error) &&
             (identical(other.authOption, authOption) ||
                 other.authOption == authOption));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, isLoadig, isError, countryCode,
-      phone, otp, auth, authOption);
+      phone, otp, auth, error, authOption);
 
   @JsonKey(ignore: true)
   @override
@@ -613,6 +763,7 @@ abstract class _AuthState implements AuthState {
           required final String? phone,
           required final String? otp,
           required final Auth? auth,
+          required final String? error,
           required final Option<Either<AuthFailure, dynamic>> authOption}) =
       _$_AuthState;
 
@@ -628,6 +779,8 @@ abstract class _AuthState implements AuthState {
   String? get otp;
   @override
   Auth? get auth;
+  @override
+  String? get error;
   @override
   Option<Either<AuthFailure, dynamic>> get authOption;
   @override

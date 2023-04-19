@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/colors.dart';
+import '../../../../core/colors.dart';
 
 class PhoneInputField extends StatelessWidget {
   const PhoneInputField({

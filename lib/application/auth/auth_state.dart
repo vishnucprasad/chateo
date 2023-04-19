@@ -9,6 +9,7 @@ class AuthState with _$AuthState {
     required String? phone,
     required String? otp,
     required Auth? auth,
+    required String? error,
     required Option<Either<AuthFailure, dynamic>> authOption,
   }) = _AuthState;
 
@@ -20,6 +21,7 @@ class AuthState with _$AuthState {
       phone: null,
       otp: null,
       auth: null,
+      error: null,
       authOption: none(),
     );
   }

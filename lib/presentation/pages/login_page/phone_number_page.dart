@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:chateo/application/auth/auth_bloc.dart';
-import 'package:chateo/presentation/core/constants.dart';
+import 'package:chateo/core/constants.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/country_code_selector.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/number_keyboard.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/phone_input_field.dart';
@@ -74,10 +74,24 @@ class PhoneNumberPage extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              LargeButton(
-                text: 'Continue',
-                onPressed: () {
-                  context.router.push(const OtpInputRoute());
+              BlocConsumer<AuthBloc, AuthState>(
+                listenWhen: (previous, current) =>
+                    previous.authOption != current.authOption,
+                listener: (context, state) {
+                  if (state.isError == false) {
+                    context.router.push(const OtpInputRoute());
+                  }
+                },
+                builder: (context, state) {
+                  return LargeButton(
+                    isLoadig: state.isLoadig,
+                    text: 'Continue',
+                    onPressed: () {
+                      context
+                          .read<AuthBloc>()
+                          .add(const AuthEvent.verifyPhone());
+                    },
+                  );
                 },
               ),
               NumberKeyboard(

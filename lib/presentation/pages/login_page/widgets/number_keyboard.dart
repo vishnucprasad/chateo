@@ -1,4 +1,4 @@
-import 'package:chateo/presentation/core/colors.dart';
+import 'package:chateo/core/colors.dart';
 import 'package:flutter/material.dart';
 
 class NumberKeyboard extends StatelessWidget {

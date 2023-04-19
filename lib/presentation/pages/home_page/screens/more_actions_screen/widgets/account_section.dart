@@ -1,5 +1,5 @@
-import 'package:chateo/presentation/core/colors.dart';
-import 'package:chateo/presentation/core/constants.dart';
+import 'package:chateo/core/colors.dart';
+import 'package:chateo/core/constants.dart';
 import 'package:flutter/material.dart';
 
 class AccountSection extends StatelessWidget {

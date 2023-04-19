@@ -1,4 +1,4 @@
-import 'package:chateo/presentation/core/constants.dart';
+import 'package:chateo/core/constants.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/number_keyboard.dart';
 import 'package:chateo/presentation/pages/login_page/widgets/otp_input_field.dart';
 import 'package:flutter/material.dart';

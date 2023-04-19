@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:chateo/presentation/core/colors.dart';
-import 'package:chateo/presentation/core/constants.dart';
+import 'package:chateo/core/colors.dart';
+import 'package:chateo/core/constants.dart';
 import 'package:chateo/presentation/router/app_router.gr.dart';
 import 'package:chateo/presentation/widgets/large_button.dart';
 import 'package:flutter/material.dart';
@@ -111,6 +111,7 @@ class ProfileCompletionPage extends StatelessWidget {
             ),
             const Spacer(),
             LargeButton(
+              isLoadig: false,
               text: 'Save',
               onPressed: () {
                 context.router.replaceAll([const HomeRoute()]);

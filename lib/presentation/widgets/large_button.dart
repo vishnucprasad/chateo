@@ -1,13 +1,15 @@
-import 'package:chateo/presentation/core/colors.dart';
+import 'package:chateo/core/colors.dart';
 import 'package:flutter/material.dart';
 
 class LargeButton extends StatelessWidget {
   const LargeButton({
     super.key,
+    required this.isLoadig,
     required this.text,
     required this.onPressed,
   });
 
+  final bool isLoadig;
   final String text;
   final void Function()? onPressed;
 
@@ -32,12 +34,20 @@ class LargeButton extends StatelessWidget {
             ),
           ),
         ),
-        child: Text(
-          text,
-          style: titleLarge?.copyWith(
-            color: lightColor,
-          ),
-        ),
+        child: isLoadig
+            ? const SizedBox(
+                height: 24,
+                width: 24,
+                child: CircularProgressIndicator(
+                  color: lightColor,
+                ),
+              )
+            : Text(
+                text,
+                style: titleLarge?.copyWith(
+                  color: lightColor,
+                ),
+              ),
       ),
     );
   }

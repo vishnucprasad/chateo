@@ -1,4 +1,4 @@
-import 'package:chateo/presentation/core/constants.dart';
+import 'package:chateo/core/constants.dart';
 import 'package:chateo/presentation/pages/home_page/screens/more_actions_screen/widgets/settings_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

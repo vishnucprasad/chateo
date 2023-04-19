@@ -39,3 +39,5 @@ const kWidth40 = SizedBox(
 const kWidth50 = SizedBox(
   width: 50,
 );
+
+const kBaseUrl = "http://10.0.2.2:3000/api/v1";
