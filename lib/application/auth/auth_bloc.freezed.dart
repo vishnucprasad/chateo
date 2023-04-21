@@ -21,6 +21,8 @@ mixin _$AuthEvent {
     required TResult Function(String phone) phoneChanged,
     required TResult Function(String? countryCode) countryCodeChanged,
     required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +30,8 @@ mixin _$AuthEvent {
     TResult? Function(String phone)? phoneChanged,
     TResult? Function(String? countryCode)? countryCodeChanged,
     TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +39,8 @@ mixin _$AuthEvent {
     TResult Function(String phone)? phoneChanged,
     TResult Function(String? countryCode)? countryCodeChanged,
     TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +49,8 @@ mixin _$AuthEvent {
     required TResult Function(_PhoneChanged value) phoneChanged,
     required TResult Function(_CountryCodeChanged value) countryCodeChanged,
     required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +58,8 @@ mixin _$AuthEvent {
     TResult? Function(_PhoneChanged value)? phoneChanged,
     TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
     TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +67,8 @@ mixin _$AuthEvent {
     TResult Function(_PhoneChanged value)? phoneChanged,
     TResult Function(_CountryCodeChanged value)? countryCodeChanged,
     TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,6 +166,8 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     required TResult Function(String phone) phoneChanged,
     required TResult Function(String? countryCode) countryCodeChanged,
     required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
   }) {
     return phoneChanged(phone);
   }
@@ -164,6 +178,8 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult? Function(String phone)? phoneChanged,
     TResult? Function(String? countryCode)? countryCodeChanged,
     TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
   }) {
     return phoneChanged?.call(phone);
   }
@@ -174,6 +190,8 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult Function(String phone)? phoneChanged,
     TResult Function(String? countryCode)? countryCodeChanged,
     TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
     required TResult orElse(),
   }) {
     if (phoneChanged != null) {
@@ -188,6 +206,8 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     required TResult Function(_PhoneChanged value) phoneChanged,
     required TResult Function(_CountryCodeChanged value) countryCodeChanged,
     required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
   }) {
     return phoneChanged(this);
   }
@@ -198,6 +218,8 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult? Function(_PhoneChanged value)? phoneChanged,
     TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
     TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
   }) {
     return phoneChanged?.call(this);
   }
@@ -208,6 +230,8 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult Function(_PhoneChanged value)? phoneChanged,
     TResult Function(_CountryCodeChanged value)? countryCodeChanged,
     TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     required TResult orElse(),
   }) {
     if (phoneChanged != null) {
@@ -305,6 +329,8 @@ class _$_CountryCodeChanged
     required TResult Function(String phone) phoneChanged,
     required TResult Function(String? countryCode) countryCodeChanged,
     required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
   }) {
     return countryCodeChanged(countryCode);
   }
@@ -315,6 +341,8 @@ class _$_CountryCodeChanged
     TResult? Function(String phone)? phoneChanged,
     TResult? Function(String? countryCode)? countryCodeChanged,
     TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
   }) {
     return countryCodeChanged?.call(countryCode);
   }
@@ -325,6 +353,8 @@ class _$_CountryCodeChanged
     TResult Function(String phone)? phoneChanged,
     TResult Function(String? countryCode)? countryCodeChanged,
     TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
     required TResult orElse(),
   }) {
     if (countryCodeChanged != null) {
@@ -339,6 +369,8 @@ class _$_CountryCodeChanged
     required TResult Function(_PhoneChanged value) phoneChanged,
     required TResult Function(_CountryCodeChanged value) countryCodeChanged,
     required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
   }) {
     return countryCodeChanged(this);
   }
@@ -349,6 +381,8 @@ class _$_CountryCodeChanged
     TResult? Function(_PhoneChanged value)? phoneChanged,
     TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
     TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
   }) {
     return countryCodeChanged?.call(this);
   }
@@ -359,6 +393,8 @@ class _$_CountryCodeChanged
     TResult Function(_PhoneChanged value)? phoneChanged,
     TResult Function(_CountryCodeChanged value)? countryCodeChanged,
     TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     required TResult orElse(),
   }) {
     if (countryCodeChanged != null) {
@@ -425,6 +461,8 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     required TResult Function(String phone) phoneChanged,
     required TResult Function(String? countryCode) countryCodeChanged,
     required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
   }) {
     return verifyPhone();
   }
@@ -435,6 +473,8 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult? Function(String phone)? phoneChanged,
     TResult? Function(String? countryCode)? countryCodeChanged,
     TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
   }) {
     return verifyPhone?.call();
   }
@@ -445,6 +485,8 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult Function(String phone)? phoneChanged,
     TResult Function(String? countryCode)? countryCodeChanged,
     TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
     required TResult orElse(),
   }) {
     if (verifyPhone != null) {
@@ -459,6 +501,8 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     required TResult Function(_PhoneChanged value) phoneChanged,
     required TResult Function(_CountryCodeChanged value) countryCodeChanged,
     required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
   }) {
     return verifyPhone(this);
   }
@@ -469,6 +513,8 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult? Function(_PhoneChanged value)? phoneChanged,
     TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
     TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
   }) {
     return verifyPhone?.call(this);
   }
@@ -479,6 +525,8 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult Function(_PhoneChanged value)? phoneChanged,
     TResult Function(_CountryCodeChanged value)? countryCodeChanged,
     TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     required TResult orElse(),
   }) {
     if (verifyPhone != null) {
@@ -493,12 +541,298 @@ abstract class _VerifyPhone implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$_OtpChangedCopyWith<$Res> {
+  factory _$$_OtpChangedCopyWith(
+          _$_OtpChanged value, $Res Function(_$_OtpChanged) then) =
+      __$$_OtpChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? otp});
+}
+
+/// @nodoc
+class __$$_OtpChangedCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_OtpChanged>
+    implements _$$_OtpChangedCopyWith<$Res> {
+  __$$_OtpChangedCopyWithImpl(
+      _$_OtpChanged _value, $Res Function(_$_OtpChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? otp = freezed,
+  }) {
+    return _then(_$_OtpChanged(
+      freezed == otp
+          ? _value.otp
+          : otp // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
+  const _$_OtpChanged(this.otp);
+
+  @override
+  final String? otp;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.otpChanged(otp: $otp)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.otpChanged'))
+      ..add(DiagnosticsProperty('otp', otp));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OtpChanged &&
+            (identical(other.otp, otp) || other.otp == otp));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, otp);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OtpChangedCopyWith<_$_OtpChanged> get copyWith =>
+      __$$_OtpChangedCopyWithImpl<_$_OtpChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
+  }) {
+    return otpChanged(otp);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
+  }) {
+    return otpChanged?.call(otp);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
+    required TResult orElse(),
+  }) {
+    if (otpChanged != null) {
+      return otpChanged(otp);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+  }) {
+    return otpChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+  }) {
+    return otpChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    required TResult orElse(),
+  }) {
+    if (otpChanged != null) {
+      return otpChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OtpChanged implements AuthEvent {
+  const factory _OtpChanged(final String? otp) = _$_OtpChanged;
+
+  String? get otp;
+  @JsonKey(ignore: true)
+  _$$_OtpChangedCopyWith<_$_OtpChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_VerifyOtpCopyWith<$Res> {
+  factory _$$_VerifyOtpCopyWith(
+          _$_VerifyOtp value, $Res Function(_$_VerifyOtp) then) =
+      __$$_VerifyOtpCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_VerifyOtpCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_VerifyOtp>
+    implements _$$_VerifyOtpCopyWith<$Res> {
+  __$$_VerifyOtpCopyWithImpl(
+      _$_VerifyOtp _value, $Res Function(_$_VerifyOtp) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
+  const _$_VerifyOtp();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.verifyOtp()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AuthEvent.verifyOtp'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_VerifyOtp);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
+  }) {
+    return verifyOtp();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
+  }) {
+    return verifyOtp?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
+    required TResult orElse(),
+  }) {
+    if (verifyOtp != null) {
+      return verifyOtp();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+  }) {
+    return verifyOtp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+  }) {
+    return verifyOtp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    required TResult orElse(),
+  }) {
+    if (verifyOtp != null) {
+      return verifyOtp(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VerifyOtp implements AuthEvent {
+  const factory _VerifyOtp() = _$_VerifyOtp;
+}
+
+/// @nodoc
 mixin _$AuthState {
   bool get isLoadig => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
   String? get countryCode => throw _privateConstructorUsedError;
   String? get phone => throw _privateConstructorUsedError;
   String? get otp => throw _privateConstructorUsedError;
+  Verification? get verification => throw _privateConstructorUsedError;
   Auth? get auth => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, dynamic>> get authOption =>
@@ -520,10 +854,12 @@ abstract class $AuthStateCopyWith<$Res> {
       String? countryCode,
       String? phone,
       String? otp,
+      Verification? verification,
       Auth? auth,
       String? error,
       Option<Either<AuthFailure, dynamic>> authOption});
 
+  $VerificationCopyWith<$Res>? get verification;
   $AuthCopyWith<$Res>? get auth;
 }
 
@@ -545,6 +881,7 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
     Object? countryCode = freezed,
     Object? phone = freezed,
     Object? otp = freezed,
+    Object? verification = freezed,
     Object? auth = freezed,
     Object? error = freezed,
     Object? authOption = null,
@@ -570,6 +907,10 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
+      verification: freezed == verification
+          ? _value.verification
+          : verification // ignore: cast_nullable_to_non_nullable
+              as Verification?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -583,6 +924,18 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
           : authOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, dynamic>>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VerificationCopyWith<$Res>? get verification {
+    if (_value.verification == null) {
+      return null;
+    }
+
+    return $VerificationCopyWith<$Res>(_value.verification!, (value) {
+      return _then(_value.copyWith(verification: value) as $Val);
+    });
   }
 
   @override
@@ -611,10 +964,13 @@ abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
       String? countryCode,
       String? phone,
       String? otp,
+      Verification? verification,
       Auth? auth,
       String? error,
       Option<Either<AuthFailure, dynamic>> authOption});
 
+  @override
+  $VerificationCopyWith<$Res>? get verification;
   @override
   $AuthCopyWith<$Res>? get auth;
 }
@@ -635,6 +991,7 @@ class __$$_AuthStateCopyWithImpl<$Res>
     Object? countryCode = freezed,
     Object? phone = freezed,
     Object? otp = freezed,
+    Object? verification = freezed,
     Object? auth = freezed,
     Object? error = freezed,
     Object? authOption = null,
@@ -660,6 +1017,10 @@ class __$$_AuthStateCopyWithImpl<$Res>
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
+      verification: freezed == verification
+          ? _value.verification
+          : verification // ignore: cast_nullable_to_non_nullable
+              as Verification?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -685,6 +1046,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       required this.countryCode,
       required this.phone,
       required this.otp,
+      required this.verification,
       required this.auth,
       required this.error,
       required this.authOption});
@@ -700,6 +1062,8 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
   @override
   final String? otp;
   @override
+  final Verification? verification;
+  @override
   final Auth? auth;
   @override
   final String? error;
@@ -708,7 +1072,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthState(isLoadig: $isLoadig, isError: $isError, countryCode: $countryCode, phone: $phone, otp: $otp, auth: $auth, error: $error, authOption: $authOption)';
+    return 'AuthState(isLoadig: $isLoadig, isError: $isError, countryCode: $countryCode, phone: $phone, otp: $otp, verification: $verification, auth: $auth, error: $error, authOption: $authOption)';
   }
 
   @override
@@ -721,6 +1085,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       ..add(DiagnosticsProperty('countryCode', countryCode))
       ..add(DiagnosticsProperty('phone', phone))
       ..add(DiagnosticsProperty('otp', otp))
+      ..add(DiagnosticsProperty('verification', verification))
       ..add(DiagnosticsProperty('auth', auth))
       ..add(DiagnosticsProperty('error', error))
       ..add(DiagnosticsProperty('authOption', authOption));
@@ -738,6 +1103,8 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
                 other.countryCode == countryCode) &&
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.otp, otp) || other.otp == otp) &&
+            (identical(other.verification, verification) ||
+                other.verification == verification) &&
             (identical(other.auth, auth) || other.auth == auth) &&
             (identical(other.error, error) || other.error == error) &&
             (identical(other.authOption, authOption) ||
@@ -746,7 +1113,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
 
   @override
   int get hashCode => Object.hash(runtimeType, isLoadig, isError, countryCode,
-      phone, otp, auth, error, authOption);
+      phone, otp, verification, auth, error, authOption);
 
   @JsonKey(ignore: true)
   @override
@@ -762,6 +1129,7 @@ abstract class _AuthState implements AuthState {
           required final String? countryCode,
           required final String? phone,
           required final String? otp,
+          required final Verification? verification,
           required final Auth? auth,
           required final String? error,
           required final Option<Either<AuthFailure, dynamic>> authOption}) =
@@ -777,6 +1145,8 @@ abstract class _AuthState implements AuthState {
   String? get phone;
   @override
   String? get otp;
+  @override
+  Verification? get verification;
   @override
   Auth? get auth;
   @override

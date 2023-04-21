@@ -20,12 +20,9 @@ Auth _$AuthFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Auth {
-  @JsonKey(name: '_id')
-  String? get id => throw _privateConstructorUsedError;
-  String? get countryCode => throw _privateConstructorUsedError;
-  String? get phone => throw _privateConstructorUsedError;
-  String? get firstName => throw _privateConstructorUsedError;
-  String? get lastName => throw _privateConstructorUsedError;
+  String? get accessToken => throw _privateConstructorUsedError;
+  String? get refreshToken => throw _privateConstructorUsedError;
+  User? get user => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,12 +34,9 @@ abstract class $AuthCopyWith<$Res> {
   factory $AuthCopyWith(Auth value, $Res Function(Auth) then) =
       _$AuthCopyWithImpl<$Res, Auth>;
   @useResult
-  $Res call(
-      {@JsonKey(name: '_id') String? id,
-      String? countryCode,
-      String? phone,
-      String? firstName,
-      String? lastName});
+  $Res call({String? accessToken, String? refreshToken, User? user});
+
+  $UserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -58,34 +52,36 @@ class _$AuthCopyWithImpl<$Res, $Val extends Auth>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? countryCode = freezed,
-    Object? phone = freezed,
-    Object? firstName = freezed,
-    Object? lastName = freezed,
+    Object? accessToken = freezed,
+    Object? refreshToken = freezed,
+    Object? user = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      accessToken: freezed == accessToken
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      countryCode: freezed == countryCode
-          ? _value.countryCode
-          : countryCode // ignore: cast_nullable_to_non_nullable
+      refreshToken: freezed == refreshToken
+          ? _value.refreshToken
+          : refreshToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      phone: freezed == phone
-          ? _value.phone
-          : phone // ignore: cast_nullable_to_non_nullable
-              as String?,
-      firstName: freezed == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      lastName: freezed == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String?,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserCopyWith<$Res>? get user {
+    if (_value.user == null) {
+      return null;
+    }
+
+    return $UserCopyWith<$Res>(_value.user!, (value) {
+      return _then(_value.copyWith(user: value) as $Val);
+    });
   }
 }
 
@@ -95,12 +91,10 @@ abstract class _$$_AuthCopyWith<$Res> implements $AuthCopyWith<$Res> {
       __$$_AuthCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(name: '_id') String? id,
-      String? countryCode,
-      String? phone,
-      String? firstName,
-      String? lastName});
+  $Res call({String? accessToken, String? refreshToken, User? user});
+
+  @override
+  $UserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -112,33 +106,23 @@ class __$$_AuthCopyWithImpl<$Res> extends _$AuthCopyWithImpl<$Res, _$_Auth>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? countryCode = freezed,
-    Object? phone = freezed,
-    Object? firstName = freezed,
-    Object? lastName = freezed,
+    Object? accessToken = freezed,
+    Object? refreshToken = freezed,
+    Object? user = freezed,
   }) {
     return _then(_$_Auth(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      accessToken: freezed == accessToken
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      countryCode: freezed == countryCode
-          ? _value.countryCode
-          : countryCode // ignore: cast_nullable_to_non_nullable
+      refreshToken: freezed == refreshToken
+          ? _value.refreshToken
+          : refreshToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      phone: freezed == phone
-          ? _value.phone
-          : phone // ignore: cast_nullable_to_non_nullable
-              as String?,
-      firstName: freezed == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      lastName: freezed == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String?,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
     ));
   }
 }
@@ -147,29 +131,22 @@ class __$$_AuthCopyWithImpl<$Res> extends _$AuthCopyWithImpl<$Res, _$_Auth>
 @JsonSerializable()
 class _$_Auth implements _Auth {
   const _$_Auth(
-      {@JsonKey(name: '_id') required this.id,
-      required this.countryCode,
-      required this.phone,
-      required this.firstName,
-      required this.lastName});
+      {required this.accessToken,
+      required this.refreshToken,
+      required this.user});
 
   factory _$_Auth.fromJson(Map<String, dynamic> json) => _$$_AuthFromJson(json);
 
   @override
-  @JsonKey(name: '_id')
-  final String? id;
+  final String? accessToken;
   @override
-  final String? countryCode;
+  final String? refreshToken;
   @override
-  final String? phone;
-  @override
-  final String? firstName;
-  @override
-  final String? lastName;
+  final User? user;
 
   @override
   String toString() {
-    return 'Auth(id: $id, countryCode: $countryCode, phone: $phone, firstName: $firstName, lastName: $lastName)';
+    return 'Auth(accessToken: $accessToken, refreshToken: $refreshToken, user: $user)';
   }
 
   @override
@@ -177,20 +154,16 @@ class _$_Auth implements _Auth {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Auth &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.countryCode, countryCode) ||
-                other.countryCode == countryCode) &&
-            (identical(other.phone, phone) || other.phone == phone) &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName));
+            (identical(other.accessToken, accessToken) ||
+                other.accessToken == accessToken) &&
+            (identical(other.refreshToken, refreshToken) ||
+                other.refreshToken == refreshToken) &&
+            (identical(other.user, user) || other.user == user));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, countryCode, phone, firstName, lastName);
+  int get hashCode => Object.hash(runtimeType, accessToken, refreshToken, user);
 
   @JsonKey(ignore: true)
   @override
@@ -208,25 +181,18 @@ class _$_Auth implements _Auth {
 
 abstract class _Auth implements Auth {
   const factory _Auth(
-      {@JsonKey(name: '_id') required final String? id,
-      required final String? countryCode,
-      required final String? phone,
-      required final String? firstName,
-      required final String? lastName}) = _$_Auth;
+      {required final String? accessToken,
+      required final String? refreshToken,
+      required final User? user}) = _$_Auth;
 
   factory _Auth.fromJson(Map<String, dynamic> json) = _$_Auth.fromJson;
 
   @override
-  @JsonKey(name: '_id')
-  String? get id;
+  String? get accessToken;
   @override
-  String? get countryCode;
+  String? get refreshToken;
   @override
-  String? get phone;
-  @override
-  String? get firstName;
-  @override
-  String? get lastName;
+  User? get user;
   @override
   @JsonKey(ignore: true)
   _$$_AuthCopyWith<_$_Auth> get copyWith => throw _privateConstructorUsedError;

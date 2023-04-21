@@ -76,9 +76,10 @@ class PhoneNumberPage extends StatelessWidget {
               const Spacer(),
               BlocConsumer<AuthBloc, AuthState>(
                 listenWhen: (previous, current) =>
-                    previous.authOption != current.authOption,
+                    previous.verification != current.verification,
                 listener: (context, state) {
-                  if (state.isError == false) {
+                  if (state.isError == false &&
+                      state.verification?.status == 'pending') {
                     context.router.push(const OtpInputRoute());
                   }
                 },

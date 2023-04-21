@@ -1,7 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:chateo/application/auth/auth_bloc.dart';
 import 'package:chateo/core/colors.dart';
 import 'package:chateo/presentation/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpInputField extends StatelessWidget {
@@ -42,18 +44,13 @@ class OtpInputField extends StatelessWidget {
         ),
       ),
       controller: controller,
+      onChanged: (value) {
+        context.read<AuthBloc>().add(AuthEvent.otpChanged(value));
+      },
       readOnly: true,
       pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
       validator: (pin) {
-        final otp =
-            '${DateTime.now().day.toString().padLeft(2, '0')}${DateTime.now().month.toString().padLeft(2, '0')}';
-
-        if (pin == otp) {
-          context.router.replaceAll([
-            const StartRoute(),
-            const ProfileCompletionRoute(),
-          ]);
-        }
+        context.read<AuthBloc>().add(const AuthEvent.verifyOtp());
 
         return null;
       },
