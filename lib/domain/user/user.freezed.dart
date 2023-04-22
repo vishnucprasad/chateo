@@ -26,6 +26,8 @@ mixin _$User {
   String? get phone => throw _privateConstructorUsedError;
   String? get firstName => throw _privateConstructorUsedError;
   String? get lastName => throw _privateConstructorUsedError;
+  bool get isVerified => throw _privateConstructorUsedError;
+  bool get isProfileCompleted => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,7 +44,9 @@ abstract class $UserCopyWith<$Res> {
       String? countryCode,
       String? phone,
       String? firstName,
-      String? lastName});
+      String? lastName,
+      bool isVerified,
+      bool isProfileCompleted});
 }
 
 /// @nodoc
@@ -63,6 +67,8 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? phone = freezed,
     Object? firstName = freezed,
     Object? lastName = freezed,
+    Object? isVerified = null,
+    Object? isProfileCompleted = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -85,6 +91,14 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String?,
+      isVerified: null == isVerified
+          ? _value.isVerified
+          : isVerified // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isProfileCompleted: null == isProfileCompleted
+          ? _value.isProfileCompleted
+          : isProfileCompleted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -100,7 +114,9 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String? countryCode,
       String? phone,
       String? firstName,
-      String? lastName});
+      String? lastName,
+      bool isVerified,
+      bool isProfileCompleted});
 }
 
 /// @nodoc
@@ -117,6 +133,8 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
     Object? phone = freezed,
     Object? firstName = freezed,
     Object? lastName = freezed,
+    Object? isVerified = null,
+    Object? isProfileCompleted = null,
   }) {
     return _then(_$_User(
       id: freezed == id
@@ -139,6 +157,14 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String?,
+      isVerified: null == isVerified
+          ? _value.isVerified
+          : isVerified // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isProfileCompleted: null == isProfileCompleted
+          ? _value.isProfileCompleted
+          : isProfileCompleted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -151,7 +177,9 @@ class _$_User implements _User {
       required this.countryCode,
       required this.phone,
       required this.firstName,
-      required this.lastName});
+      required this.lastName,
+      required this.isVerified,
+      required this.isProfileCompleted});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
@@ -166,10 +194,14 @@ class _$_User implements _User {
   final String? firstName;
   @override
   final String? lastName;
+  @override
+  final bool isVerified;
+  @override
+  final bool isProfileCompleted;
 
   @override
   String toString() {
-    return 'User(id: $id, countryCode: $countryCode, phone: $phone, firstName: $firstName, lastName: $lastName)';
+    return 'User(id: $id, countryCode: $countryCode, phone: $phone, firstName: $firstName, lastName: $lastName, isVerified: $isVerified, isProfileCompleted: $isProfileCompleted)';
   }
 
   @override
@@ -184,13 +216,17 @@ class _$_User implements _User {
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
             (identical(other.lastName, lastName) ||
-                other.lastName == lastName));
+                other.lastName == lastName) &&
+            (identical(other.isVerified, isVerified) ||
+                other.isVerified == isVerified) &&
+            (identical(other.isProfileCompleted, isProfileCompleted) ||
+                other.isProfileCompleted == isProfileCompleted));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, countryCode, phone, firstName, lastName);
+  int get hashCode => Object.hash(runtimeType, id, countryCode, phone,
+      firstName, lastName, isVerified, isProfileCompleted);
 
   @JsonKey(ignore: true)
   @override
@@ -212,7 +248,9 @@ abstract class _User implements User {
       required final String? countryCode,
       required final String? phone,
       required final String? firstName,
-      required final String? lastName}) = _$_User;
+      required final String? lastName,
+      required final bool isVerified,
+      required final bool isProfileCompleted}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
@@ -227,6 +265,10 @@ abstract class _User implements User {
   String? get firstName;
   @override
   String? get lastName;
+  @override
+  bool get isVerified;
+  @override
+  bool get isProfileCompleted;
   @override
   @JsonKey(ignore: true)
   _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;

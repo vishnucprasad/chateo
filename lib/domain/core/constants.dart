@@ -1,5 +1,5 @@
 enum Roles {
-  student,
+  user,
   admin,
 }
 

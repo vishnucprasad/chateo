@@ -97,7 +97,7 @@ class PhoneNumberPage extends StatelessWidget {
                 },
                 builder: (context, state) {
                   return LargeButton(
-                    isLoadig: state.isLoadig,
+                    isLoadig: state.isLoading,
                     text: 'Continue',
                     onPressed: () {
                       context

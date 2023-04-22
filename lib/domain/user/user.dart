@@ -13,6 +13,8 @@ class User with _$User {
     required String? phone,
     required String? firstName,
     required String? lastName,
+    required bool isVerified,
+    required bool isProfileCompleted,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

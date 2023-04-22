@@ -23,6 +23,9 @@ mixin _$AuthEvent {
     required TResult Function() verifyPhone,
     required TResult Function(String? otp) otpChanged,
     required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +35,9 @@ mixin _$AuthEvent {
     TResult? Function()? verifyPhone,
     TResult? Function(String? otp)? otpChanged,
     TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +47,9 @@ mixin _$AuthEvent {
     TResult Function()? verifyPhone,
     TResult Function(String? otp)? otpChanged,
     TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +60,9 @@ mixin _$AuthEvent {
     required TResult Function(_VerifyPhone value) verifyPhone,
     required TResult Function(_OtpChanged value) otpChanged,
     required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +72,9 @@ mixin _$AuthEvent {
     TResult? Function(_VerifyPhone value)? verifyPhone,
     TResult? Function(_OtpChanged value)? otpChanged,
     TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +84,9 @@ mixin _$AuthEvent {
     TResult Function(_VerifyPhone value)? verifyPhone,
     TResult Function(_OtpChanged value)? otpChanged,
     TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -168,6 +186,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     required TResult Function() verifyPhone,
     required TResult Function(String? otp) otpChanged,
     required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
   }) {
     return phoneChanged(phone);
   }
@@ -180,6 +201,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult? Function()? verifyPhone,
     TResult? Function(String? otp)? otpChanged,
     TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
   }) {
     return phoneChanged?.call(phone);
   }
@@ -192,6 +216,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult Function()? verifyPhone,
     TResult Function(String? otp)? otpChanged,
     TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (phoneChanged != null) {
@@ -208,6 +235,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     required TResult Function(_VerifyPhone value) verifyPhone,
     required TResult Function(_OtpChanged value) otpChanged,
     required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return phoneChanged(this);
   }
@@ -220,6 +250,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult? Function(_VerifyPhone value)? verifyPhone,
     TResult? Function(_OtpChanged value)? otpChanged,
     TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return phoneChanged?.call(this);
   }
@@ -232,6 +265,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult Function(_VerifyPhone value)? verifyPhone,
     TResult Function(_OtpChanged value)? otpChanged,
     TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (phoneChanged != null) {
@@ -331,6 +367,9 @@ class _$_CountryCodeChanged
     required TResult Function() verifyPhone,
     required TResult Function(String? otp) otpChanged,
     required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
   }) {
     return countryCodeChanged(countryCode);
   }
@@ -343,6 +382,9 @@ class _$_CountryCodeChanged
     TResult? Function()? verifyPhone,
     TResult? Function(String? otp)? otpChanged,
     TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
   }) {
     return countryCodeChanged?.call(countryCode);
   }
@@ -355,6 +397,9 @@ class _$_CountryCodeChanged
     TResult Function()? verifyPhone,
     TResult Function(String? otp)? otpChanged,
     TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (countryCodeChanged != null) {
@@ -371,6 +416,9 @@ class _$_CountryCodeChanged
     required TResult Function(_VerifyPhone value) verifyPhone,
     required TResult Function(_OtpChanged value) otpChanged,
     required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return countryCodeChanged(this);
   }
@@ -383,6 +431,9 @@ class _$_CountryCodeChanged
     TResult? Function(_VerifyPhone value)? verifyPhone,
     TResult? Function(_OtpChanged value)? otpChanged,
     TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return countryCodeChanged?.call(this);
   }
@@ -395,6 +446,9 @@ class _$_CountryCodeChanged
     TResult Function(_VerifyPhone value)? verifyPhone,
     TResult Function(_OtpChanged value)? otpChanged,
     TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (countryCodeChanged != null) {
@@ -463,6 +517,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     required TResult Function() verifyPhone,
     required TResult Function(String? otp) otpChanged,
     required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
   }) {
     return verifyPhone();
   }
@@ -475,6 +532,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult? Function()? verifyPhone,
     TResult? Function(String? otp)? otpChanged,
     TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
   }) {
     return verifyPhone?.call();
   }
@@ -487,6 +547,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult Function()? verifyPhone,
     TResult Function(String? otp)? otpChanged,
     TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (verifyPhone != null) {
@@ -503,6 +566,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     required TResult Function(_VerifyPhone value) verifyPhone,
     required TResult Function(_OtpChanged value) otpChanged,
     required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return verifyPhone(this);
   }
@@ -515,6 +581,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult? Function(_VerifyPhone value)? verifyPhone,
     TResult? Function(_OtpChanged value)? otpChanged,
     TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return verifyPhone?.call(this);
   }
@@ -527,6 +596,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult Function(_VerifyPhone value)? verifyPhone,
     TResult Function(_OtpChanged value)? otpChanged,
     TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (verifyPhone != null) {
@@ -617,6 +689,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     required TResult Function() verifyPhone,
     required TResult Function(String? otp) otpChanged,
     required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
   }) {
     return otpChanged(otp);
   }
@@ -629,6 +704,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     TResult? Function()? verifyPhone,
     TResult? Function(String? otp)? otpChanged,
     TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
   }) {
     return otpChanged?.call(otp);
   }
@@ -641,6 +719,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     TResult Function()? verifyPhone,
     TResult Function(String? otp)? otpChanged,
     TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (otpChanged != null) {
@@ -657,6 +738,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     required TResult Function(_VerifyPhone value) verifyPhone,
     required TResult Function(_OtpChanged value) otpChanged,
     required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return otpChanged(this);
   }
@@ -669,6 +753,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     TResult? Function(_VerifyPhone value)? verifyPhone,
     TResult? Function(_OtpChanged value)? otpChanged,
     TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return otpChanged?.call(this);
   }
@@ -681,6 +768,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     TResult Function(_VerifyPhone value)? verifyPhone,
     TResult Function(_OtpChanged value)? otpChanged,
     TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (otpChanged != null) {
@@ -748,6 +838,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     required TResult Function() verifyPhone,
     required TResult Function(String? otp) otpChanged,
     required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
   }) {
     return verifyOtp();
   }
@@ -760,6 +853,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult? Function()? verifyPhone,
     TResult? Function(String? otp)? otpChanged,
     TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
   }) {
     return verifyOtp?.call();
   }
@@ -772,6 +868,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult Function()? verifyPhone,
     TResult Function(String? otp)? otpChanged,
     TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (verifyOtp != null) {
@@ -788,6 +887,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     required TResult Function(_VerifyPhone value) verifyPhone,
     required TResult Function(_OtpChanged value) otpChanged,
     required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return verifyOtp(this);
   }
@@ -800,6 +902,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult? Function(_VerifyPhone value)? verifyPhone,
     TResult? Function(_OtpChanged value)? otpChanged,
     TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return verifyOtp?.call(this);
   }
@@ -812,6 +917,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult Function(_VerifyPhone value)? verifyPhone,
     TResult Function(_OtpChanged value)? otpChanged,
     TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (verifyOtp != null) {
@@ -826,12 +934,505 @@ abstract class _VerifyOtp implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$_SaveTokenCopyWith<$Res> {
+  factory _$$_SaveTokenCopyWith(
+          _$_SaveToken value, $Res Function(_$_SaveToken) then) =
+      __$$_SaveTokenCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String key, Token? token});
+
+  $TokenCopyWith<$Res>? get token;
+}
+
+/// @nodoc
+class __$$_SaveTokenCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_SaveToken>
+    implements _$$_SaveTokenCopyWith<$Res> {
+  __$$_SaveTokenCopyWithImpl(
+      _$_SaveToken _value, $Res Function(_$_SaveToken) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = null,
+    Object? token = freezed,
+  }) {
+    return _then(_$_SaveToken(
+      null == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      freezed == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as Token?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TokenCopyWith<$Res>? get token {
+    if (_value.token == null) {
+      return null;
+    }
+
+    return $TokenCopyWith<$Res>(_value.token!, (value) {
+      return _then(_value.copyWith(token: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_SaveToken with DiagnosticableTreeMixin implements _SaveToken {
+  const _$_SaveToken(this.key, this.token);
+
+  @override
+  final String key;
+  @override
+  final Token? token;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.saveToken(key: $key, token: $token)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.saveToken'))
+      ..add(DiagnosticsProperty('key', key))
+      ..add(DiagnosticsProperty('token', token));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SaveToken &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.token, token) || other.token == token));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, key, token);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SaveTokenCopyWith<_$_SaveToken> get copyWith =>
+      __$$_SaveTokenCopyWithImpl<_$_SaveToken>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
+  }) {
+    return saveToken(key, token);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
+  }) {
+    return saveToken?.call(key, token);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (saveToken != null) {
+      return saveToken(key, token);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
+  }) {
+    return saveToken(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
+  }) {
+    return saveToken?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (saveToken != null) {
+      return saveToken(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SaveToken implements AuthEvent {
+  const factory _SaveToken(final String key, final Token? token) = _$_SaveToken;
+
+  String get key;
+  Token? get token;
+  @JsonKey(ignore: true)
+  _$$_SaveTokenCopyWith<_$_SaveToken> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_AuthenticateCopyWith<$Res> {
+  factory _$$_AuthenticateCopyWith(
+          _$_Authenticate value, $Res Function(_$_Authenticate) then) =
+      __$$_AuthenticateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_AuthenticateCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_Authenticate>
+    implements _$$_AuthenticateCopyWith<$Res> {
+  __$$_AuthenticateCopyWithImpl(
+      _$_Authenticate _value, $Res Function(_$_Authenticate) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_Authenticate with DiagnosticableTreeMixin implements _Authenticate {
+  const _$_Authenticate();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.authenticate()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AuthEvent.authenticate'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Authenticate);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
+  }) {
+    return authenticate();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
+  }) {
+    return authenticate?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (authenticate != null) {
+      return authenticate();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
+  }) {
+    return authenticate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
+  }) {
+    return authenticate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (authenticate != null) {
+      return authenticate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Authenticate implements AuthEvent {
+  const factory _Authenticate() = _$_Authenticate;
+}
+
+/// @nodoc
+abstract class _$$_RefreshTokenCopyWith<$Res> {
+  factory _$$_RefreshTokenCopyWith(
+          _$_RefreshToken value, $Res Function(_$_RefreshToken) then) =
+      __$$_RefreshTokenCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_RefreshTokenCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_RefreshToken>
+    implements _$$_RefreshTokenCopyWith<$Res> {
+  __$$_RefreshTokenCopyWithImpl(
+      _$_RefreshToken _value, $Res Function(_$_RefreshToken) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_RefreshToken with DiagnosticableTreeMixin implements _RefreshToken {
+  const _$_RefreshToken();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.refreshToken()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AuthEvent.refreshToken'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_RefreshToken);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
+  }) {
+    return refreshToken();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
+  }) {
+    return refreshToken?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (refreshToken != null) {
+      return refreshToken();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
+  }) {
+    return refreshToken(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
+  }) {
+    return refreshToken?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (refreshToken != null) {
+      return refreshToken(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RefreshToken implements AuthEvent {
+  const factory _RefreshToken() = _$_RefreshToken;
+}
+
+/// @nodoc
 mixin _$AuthState {
-  bool get isLoadig => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
+  bool get isTokenExpired => throw _privateConstructorUsedError;
   String? get countryCode => throw _privateConstructorUsedError;
   String? get phone => throw _privateConstructorUsedError;
   String? get otp => throw _privateConstructorUsedError;
+  Token? get accessToken => throw _privateConstructorUsedError;
+  Token? get refreshToken => throw _privateConstructorUsedError;
+  Token? get expiredToken => throw _privateConstructorUsedError;
   Verification? get verification => throw _privateConstructorUsedError;
   Auth? get auth => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
@@ -849,16 +1450,23 @@ abstract class $AuthStateCopyWith<$Res> {
       _$AuthStateCopyWithImpl<$Res, AuthState>;
   @useResult
   $Res call(
-      {bool isLoadig,
+      {bool isLoading,
       bool isError,
+      bool isTokenExpired,
       String? countryCode,
       String? phone,
       String? otp,
+      Token? accessToken,
+      Token? refreshToken,
+      Token? expiredToken,
       Verification? verification,
       Auth? auth,
       String? error,
       Option<Either<AuthFailure, dynamic>> authOption});
 
+  $TokenCopyWith<$Res>? get accessToken;
+  $TokenCopyWith<$Res>? get refreshToken;
+  $TokenCopyWith<$Res>? get expiredToken;
   $VerificationCopyWith<$Res>? get verification;
   $AuthCopyWith<$Res>? get auth;
 }
@@ -876,24 +1484,32 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoadig = null,
+    Object? isLoading = null,
     Object? isError = null,
+    Object? isTokenExpired = null,
     Object? countryCode = freezed,
     Object? phone = freezed,
     Object? otp = freezed,
+    Object? accessToken = freezed,
+    Object? refreshToken = freezed,
+    Object? expiredToken = freezed,
     Object? verification = freezed,
     Object? auth = freezed,
     Object? error = freezed,
     Object? authOption = null,
   }) {
     return _then(_value.copyWith(
-      isLoadig: null == isLoadig
-          ? _value.isLoadig
-          : isLoadig // ignore: cast_nullable_to_non_nullable
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       isError: null == isError
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTokenExpired: null == isTokenExpired
+          ? _value.isTokenExpired
+          : isTokenExpired // ignore: cast_nullable_to_non_nullable
               as bool,
       countryCode: freezed == countryCode
           ? _value.countryCode
@@ -907,6 +1523,18 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
+      accessToken: freezed == accessToken
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as Token?,
+      refreshToken: freezed == refreshToken
+          ? _value.refreshToken
+          : refreshToken // ignore: cast_nullable_to_non_nullable
+              as Token?,
+      expiredToken: freezed == expiredToken
+          ? _value.expiredToken
+          : expiredToken // ignore: cast_nullable_to_non_nullable
+              as Token?,
       verification: freezed == verification
           ? _value.verification
           : verification // ignore: cast_nullable_to_non_nullable
@@ -924,6 +1552,42 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
           : authOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, dynamic>>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TokenCopyWith<$Res>? get accessToken {
+    if (_value.accessToken == null) {
+      return null;
+    }
+
+    return $TokenCopyWith<$Res>(_value.accessToken!, (value) {
+      return _then(_value.copyWith(accessToken: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TokenCopyWith<$Res>? get refreshToken {
+    if (_value.refreshToken == null) {
+      return null;
+    }
+
+    return $TokenCopyWith<$Res>(_value.refreshToken!, (value) {
+      return _then(_value.copyWith(refreshToken: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TokenCopyWith<$Res>? get expiredToken {
+    if (_value.expiredToken == null) {
+      return null;
+    }
+
+    return $TokenCopyWith<$Res>(_value.expiredToken!, (value) {
+      return _then(_value.copyWith(expiredToken: value) as $Val);
+    });
   }
 
   @override
@@ -959,16 +1623,26 @@ abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {bool isLoadig,
+      {bool isLoading,
       bool isError,
+      bool isTokenExpired,
       String? countryCode,
       String? phone,
       String? otp,
+      Token? accessToken,
+      Token? refreshToken,
+      Token? expiredToken,
       Verification? verification,
       Auth? auth,
       String? error,
       Option<Either<AuthFailure, dynamic>> authOption});
 
+  @override
+  $TokenCopyWith<$Res>? get accessToken;
+  @override
+  $TokenCopyWith<$Res>? get refreshToken;
+  @override
+  $TokenCopyWith<$Res>? get expiredToken;
   @override
   $VerificationCopyWith<$Res>? get verification;
   @override
@@ -986,24 +1660,32 @@ class __$$_AuthStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoadig = null,
+    Object? isLoading = null,
     Object? isError = null,
+    Object? isTokenExpired = null,
     Object? countryCode = freezed,
     Object? phone = freezed,
     Object? otp = freezed,
+    Object? accessToken = freezed,
+    Object? refreshToken = freezed,
+    Object? expiredToken = freezed,
     Object? verification = freezed,
     Object? auth = freezed,
     Object? error = freezed,
     Object? authOption = null,
   }) {
     return _then(_$_AuthState(
-      isLoadig: null == isLoadig
-          ? _value.isLoadig
-          : isLoadig // ignore: cast_nullable_to_non_nullable
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       isError: null == isError
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTokenExpired: null == isTokenExpired
+          ? _value.isTokenExpired
+          : isTokenExpired // ignore: cast_nullable_to_non_nullable
               as bool,
       countryCode: freezed == countryCode
           ? _value.countryCode
@@ -1017,6 +1699,18 @@ class __$$_AuthStateCopyWithImpl<$Res>
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
+      accessToken: freezed == accessToken
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as Token?,
+      refreshToken: freezed == refreshToken
+          ? _value.refreshToken
+          : refreshToken // ignore: cast_nullable_to_non_nullable
+              as Token?,
+      expiredToken: freezed == expiredToken
+          ? _value.expiredToken
+          : expiredToken // ignore: cast_nullable_to_non_nullable
+              as Token?,
       verification: freezed == verification
           ? _value.verification
           : verification // ignore: cast_nullable_to_non_nullable
@@ -1041,26 +1735,38 @@ class __$$_AuthStateCopyWithImpl<$Res>
 
 class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
   const _$_AuthState(
-      {required this.isLoadig,
+      {required this.isLoading,
       required this.isError,
+      required this.isTokenExpired,
       required this.countryCode,
       required this.phone,
       required this.otp,
+      required this.accessToken,
+      required this.refreshToken,
+      required this.expiredToken,
       required this.verification,
       required this.auth,
       required this.error,
       required this.authOption});
 
   @override
-  final bool isLoadig;
+  final bool isLoading;
   @override
   final bool isError;
+  @override
+  final bool isTokenExpired;
   @override
   final String? countryCode;
   @override
   final String? phone;
   @override
   final String? otp;
+  @override
+  final Token? accessToken;
+  @override
+  final Token? refreshToken;
+  @override
+  final Token? expiredToken;
   @override
   final Verification? verification;
   @override
@@ -1072,7 +1778,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthState(isLoadig: $isLoadig, isError: $isError, countryCode: $countryCode, phone: $phone, otp: $otp, verification: $verification, auth: $auth, error: $error, authOption: $authOption)';
+    return 'AuthState(isLoading: $isLoading, isError: $isError, isTokenExpired: $isTokenExpired, countryCode: $countryCode, phone: $phone, otp: $otp, accessToken: $accessToken, refreshToken: $refreshToken, expiredToken: $expiredToken, verification: $verification, auth: $auth, error: $error, authOption: $authOption)';
   }
 
   @override
@@ -1080,11 +1786,15 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'AuthState'))
-      ..add(DiagnosticsProperty('isLoadig', isLoadig))
+      ..add(DiagnosticsProperty('isLoading', isLoading))
       ..add(DiagnosticsProperty('isError', isError))
+      ..add(DiagnosticsProperty('isTokenExpired', isTokenExpired))
       ..add(DiagnosticsProperty('countryCode', countryCode))
       ..add(DiagnosticsProperty('phone', phone))
       ..add(DiagnosticsProperty('otp', otp))
+      ..add(DiagnosticsProperty('accessToken', accessToken))
+      ..add(DiagnosticsProperty('refreshToken', refreshToken))
+      ..add(DiagnosticsProperty('expiredToken', expiredToken))
       ..add(DiagnosticsProperty('verification', verification))
       ..add(DiagnosticsProperty('auth', auth))
       ..add(DiagnosticsProperty('error', error))
@@ -1096,13 +1806,21 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AuthState &&
-            (identical(other.isLoadig, isLoadig) ||
-                other.isLoadig == isLoadig) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
             (identical(other.isError, isError) || other.isError == isError) &&
+            (identical(other.isTokenExpired, isTokenExpired) ||
+                other.isTokenExpired == isTokenExpired) &&
             (identical(other.countryCode, countryCode) ||
                 other.countryCode == countryCode) &&
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.otp, otp) || other.otp == otp) &&
+            (identical(other.accessToken, accessToken) ||
+                other.accessToken == accessToken) &&
+            (identical(other.refreshToken, refreshToken) ||
+                other.refreshToken == refreshToken) &&
+            (identical(other.expiredToken, expiredToken) ||
+                other.expiredToken == expiredToken) &&
             (identical(other.verification, verification) ||
                 other.verification == verification) &&
             (identical(other.auth, auth) || other.auth == auth) &&
@@ -1112,8 +1830,21 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isLoadig, isError, countryCode,
-      phone, otp, verification, auth, error, authOption);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isLoading,
+      isError,
+      isTokenExpired,
+      countryCode,
+      phone,
+      otp,
+      accessToken,
+      refreshToken,
+      expiredToken,
+      verification,
+      auth,
+      error,
+      authOption);
 
   @JsonKey(ignore: true)
   @override
@@ -1124,11 +1855,15 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
 
 abstract class _AuthState implements AuthState {
   const factory _AuthState(
-          {required final bool isLoadig,
+          {required final bool isLoading,
           required final bool isError,
+          required final bool isTokenExpired,
           required final String? countryCode,
           required final String? phone,
           required final String? otp,
+          required final Token? accessToken,
+          required final Token? refreshToken,
+          required final Token? expiredToken,
           required final Verification? verification,
           required final Auth? auth,
           required final String? error,
@@ -1136,15 +1871,23 @@ abstract class _AuthState implements AuthState {
       _$_AuthState;
 
   @override
-  bool get isLoadig;
+  bool get isLoading;
   @override
   bool get isError;
+  @override
+  bool get isTokenExpired;
   @override
   String? get countryCode;
   @override
   String? get phone;
   @override
   String? get otp;
+  @override
+  Token? get accessToken;
+  @override
+  Token? get refreshToken;
+  @override
+  Token? get expiredToken;
   @override
   Verification? get verification;
   @override
