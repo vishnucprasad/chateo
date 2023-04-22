@@ -112,6 +112,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
                     isLoadig: false,
                     isError: true,
                     error: value.message,
+                    otp: null,
                     authOption: some(left(l)),
                   );
                 },
@@ -120,6 +121,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
                     isLoadig: false,
                     isError: true,
                     error: value.message,
+                    otp: null,
                     authOption: some(left(l)),
                   );
                 },

@@ -1,3 +1,4 @@
+import 'package:chateo/core/colors.dart';
 import 'package:flutter/material.dart';
 
 const kHeight5 = SizedBox(
@@ -41,3 +42,33 @@ const kWidth50 = SizedBox(
 );
 
 const kBaseUrl = "http://10.0.2.2:3000/api/v1";
+
+SnackBar showErrorSnackBar({
+  required String? errorMessage,
+  required bool isDarkMode,
+}) {
+  return SnackBar(
+    padding: EdgeInsets.zero,
+    content: Row(
+      children: [
+        Container(
+          width: 10,
+          height: 50,
+          color: Colors.red,
+        ),
+        kWidth,
+        const Icon(
+          Icons.warning,
+          color: Colors.red,
+        ),
+        kWidth,
+        Text(
+          errorMessage ?? "Something went wrong",
+          style: TextStyle(color: isDarkMode ? lightColor : darkColor),
+        )
+      ],
+    ),
+    backgroundColor: isDarkMode ? darkColor : lightColor,
+    behavior: SnackBarBehavior.fixed,
+  );
+}

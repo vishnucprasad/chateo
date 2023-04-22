@@ -16,6 +16,9 @@ class PhoneNumberPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Brightness currentBrightness =
+        MediaQuery.of(context).platformBrightness;
+    final bool isDarkMode = currentBrightness == Brightness.dark;
     final TextStyle? headLine = Theme.of(context).textTheme.headlineSmall;
     final TextEditingController controller = TextEditingController();
 
@@ -76,11 +79,20 @@ class PhoneNumberPage extends StatelessWidget {
               const Spacer(),
               BlocConsumer<AuthBloc, AuthState>(
                 listenWhen: (previous, current) =>
-                    previous.verification != current.verification,
+                    previous.verification != current.verification ||
+                    previous.error != current.error,
                 listener: (context, state) {
                   if (state.isError == false &&
                       state.verification?.status == 'pending') {
                     context.router.push(const OtpInputRoute());
+                  }
+
+                  if (state.isError && state.error != null) {
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(showErrorSnackBar(
+                      errorMessage: state.error,
+                      isDarkMode: isDarkMode,
+                    ));
                   }
                 },
                 builder: (context, state) {

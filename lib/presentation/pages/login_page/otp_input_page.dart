@@ -13,6 +13,9 @@ class OtpInputPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Brightness currentBrightness =
+        MediaQuery.of(context).platformBrightness;
+    final bool isDarkMode = currentBrightness == Brightness.dark;
     final TextStyle? headLine = Theme.of(context).textTheme.headlineSmall;
     final TextStyle? titleText = Theme.of(context).textTheme.titleMedium;
     final TextEditingController pinController = TextEditingController();
@@ -22,7 +25,9 @@ class OtpInputPage extends StatelessWidget {
         child: SizedBox(
           width: double.infinity,
           child: BlocConsumer<AuthBloc, AuthState>(
-            listenWhen: (previous, current) => previous.auth != current.auth,
+            listenWhen: (previous, current) =>
+                previous.auth != current.auth ||
+                current.error != previous.error,
             listener: (context, state) {
               if (state.isError == false &&
                   state.verification?.status == 'approved') {
@@ -30,6 +35,16 @@ class OtpInputPage extends StatelessWidget {
                   const StartRoute(),
                   const ProfileCompletionRoute(),
                 ]);
+              }
+
+              if (state.isError && state.error != null) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  showErrorSnackBar(
+                    errorMessage: state.error,
+                    isDarkMode: isDarkMode,
+                  ),
+                );
+                pinController.clear();
               }
             },
             builder: (context, state) {
