@@ -11,4 +11,8 @@ class AuthEvent with _$AuthEvent {
   const factory AuthEvent.saveToken(String key, Token? token) = _SaveToken;
   const factory AuthEvent.authenticate() = _Authenticate;
   const factory AuthEvent.refreshToken() = _RefreshToken;
+  const factory AuthEvent.firstNameChanged(String? firstName) =
+      _FirstNameChanged;
+  const factory AuthEvent.lastNameChanged(String? lastName) = _LastNameChanged;
+  const factory AuthEvent.completeProfile() = _CompleteProfile;
 }

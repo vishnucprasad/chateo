@@ -294,4 +294,81 @@ class AuthRepo implements IAuthRepo {
       );
     }
   }
+
+  @override
+  Future<Either<AuthFailure, User>> completeProfile(
+    String? firstName,
+    String? lastName,
+  ) async {
+    final accessToken = getIt<SharedPreferences>().getString("accessToken");
+
+    try {
+      final isValidFirstName = firstName != null && firstName.isNotEmpty;
+      final isValidLastName = lastName != null && lastName.isNotEmpty;
+
+      if (!isValidFirstName || !isValidLastName) {
+        return left(
+          const AuthFailure.clientFailure(
+            "First and last name are required",
+          ),
+        );
+      }
+
+      final Map<String, dynamic> data = {
+        "firstName": firstName,
+        "lastName": lastName,
+        "isProfileCompleted": true,
+      };
+
+      final dio = getIt<Dio>();
+
+      dio.options.headers["Authorization"] = "Bearer $accessToken";
+
+      final Response response = await dio.patch(
+        ApiEndpoints.authenticate,
+        data: data,
+      );
+
+      if (response.statusCode == 200) {
+        final User user = User.fromJson(response.data["user"]);
+        return right(user);
+      }
+
+      return left(
+        const AuthFailure.clientFailure(
+          "Something went wrong, please try again",
+        ),
+      );
+    } on DioError catch (e) {
+      if (e.response?.statusCode == 401) {
+        return left(
+          AuthFailure.tokenFailure(
+            Token(
+              role: Roles.admin,
+              token: accessToken,
+              type: TokenType.refreshToken,
+            ),
+          ),
+        );
+      }
+
+      if (e.response?.statusCode == 404 || e.response?.statusCode == 500) {
+        return left(
+          AuthFailure.serverFailure(e.response?.data?["message"]),
+        );
+      }
+
+      return left(
+        const AuthFailure.serverFailure(
+          "Something went wrong on the server side",
+        ),
+      );
+    } catch (_) {
+      return left(
+        const AuthFailure.clientFailure(
+          'Something went wrong, please try again',
+        ),
+      );
+    }
+  }
 }

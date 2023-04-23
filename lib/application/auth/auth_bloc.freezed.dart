@@ -26,6 +26,9 @@ mixin _$AuthEvent {
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +41,9 @@ mixin _$AuthEvent {
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +56,9 @@ mixin _$AuthEvent {
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -63,6 +72,9 @@ mixin _$AuthEvent {
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +87,9 @@ mixin _$AuthEvent {
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,6 +102,9 @@ mixin _$AuthEvent {
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -189,6 +207,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) {
     return phoneChanged(phone);
   }
@@ -204,6 +225,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) {
     return phoneChanged?.call(phone);
   }
@@ -219,6 +243,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) {
     if (phoneChanged != null) {
@@ -238,6 +265,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) {
     return phoneChanged(this);
   }
@@ -253,6 +283,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) {
     return phoneChanged?.call(this);
   }
@@ -268,6 +301,9 @@ class _$_PhoneChanged with DiagnosticableTreeMixin implements _PhoneChanged {
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) {
     if (phoneChanged != null) {
@@ -370,6 +406,9 @@ class _$_CountryCodeChanged
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) {
     return countryCodeChanged(countryCode);
   }
@@ -385,6 +424,9 @@ class _$_CountryCodeChanged
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) {
     return countryCodeChanged?.call(countryCode);
   }
@@ -400,6 +442,9 @@ class _$_CountryCodeChanged
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) {
     if (countryCodeChanged != null) {
@@ -419,6 +464,9 @@ class _$_CountryCodeChanged
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) {
     return countryCodeChanged(this);
   }
@@ -434,6 +482,9 @@ class _$_CountryCodeChanged
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) {
     return countryCodeChanged?.call(this);
   }
@@ -449,6 +500,9 @@ class _$_CountryCodeChanged
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) {
     if (countryCodeChanged != null) {
@@ -520,6 +574,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) {
     return verifyPhone();
   }
@@ -535,6 +592,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) {
     return verifyPhone?.call();
   }
@@ -550,6 +610,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) {
     if (verifyPhone != null) {
@@ -569,6 +632,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) {
     return verifyPhone(this);
   }
@@ -584,6 +650,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) {
     return verifyPhone?.call(this);
   }
@@ -599,6 +668,9 @@ class _$_VerifyPhone with DiagnosticableTreeMixin implements _VerifyPhone {
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) {
     if (verifyPhone != null) {
@@ -692,6 +764,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) {
     return otpChanged(otp);
   }
@@ -707,6 +782,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) {
     return otpChanged?.call(otp);
   }
@@ -722,6 +800,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) {
     if (otpChanged != null) {
@@ -741,6 +822,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) {
     return otpChanged(this);
   }
@@ -756,6 +840,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) {
     return otpChanged?.call(this);
   }
@@ -771,6 +858,9 @@ class _$_OtpChanged with DiagnosticableTreeMixin implements _OtpChanged {
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) {
     if (otpChanged != null) {
@@ -841,6 +931,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) {
     return verifyOtp();
   }
@@ -856,6 +949,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) {
     return verifyOtp?.call();
   }
@@ -871,6 +967,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) {
     if (verifyOtp != null) {
@@ -890,6 +989,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) {
     return verifyOtp(this);
   }
@@ -905,6 +1007,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) {
     return verifyOtp?.call(this);
   }
@@ -920,6 +1025,9 @@ class _$_VerifyOtp with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) {
     if (verifyOtp != null) {
@@ -1036,6 +1144,9 @@ class _$_SaveToken with DiagnosticableTreeMixin implements _SaveToken {
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) {
     return saveToken(key, token);
   }
@@ -1051,6 +1162,9 @@ class _$_SaveToken with DiagnosticableTreeMixin implements _SaveToken {
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) {
     return saveToken?.call(key, token);
   }
@@ -1066,6 +1180,9 @@ class _$_SaveToken with DiagnosticableTreeMixin implements _SaveToken {
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) {
     if (saveToken != null) {
@@ -1085,6 +1202,9 @@ class _$_SaveToken with DiagnosticableTreeMixin implements _SaveToken {
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) {
     return saveToken(this);
   }
@@ -1100,6 +1220,9 @@ class _$_SaveToken with DiagnosticableTreeMixin implements _SaveToken {
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) {
     return saveToken?.call(this);
   }
@@ -1115,6 +1238,9 @@ class _$_SaveToken with DiagnosticableTreeMixin implements _SaveToken {
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) {
     if (saveToken != null) {
@@ -1186,6 +1312,9 @@ class _$_Authenticate with DiagnosticableTreeMixin implements _Authenticate {
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) {
     return authenticate();
   }
@@ -1201,6 +1330,9 @@ class _$_Authenticate with DiagnosticableTreeMixin implements _Authenticate {
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) {
     return authenticate?.call();
   }
@@ -1216,6 +1348,9 @@ class _$_Authenticate with DiagnosticableTreeMixin implements _Authenticate {
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) {
     if (authenticate != null) {
@@ -1235,6 +1370,9 @@ class _$_Authenticate with DiagnosticableTreeMixin implements _Authenticate {
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) {
     return authenticate(this);
   }
@@ -1250,6 +1388,9 @@ class _$_Authenticate with DiagnosticableTreeMixin implements _Authenticate {
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) {
     return authenticate?.call(this);
   }
@@ -1265,6 +1406,9 @@ class _$_Authenticate with DiagnosticableTreeMixin implements _Authenticate {
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) {
     if (authenticate != null) {
@@ -1330,6 +1474,9 @@ class _$_RefreshToken with DiagnosticableTreeMixin implements _RefreshToken {
     required TResult Function(String key, Token? token) saveToken,
     required TResult Function() authenticate,
     required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
   }) {
     return refreshToken();
   }
@@ -1345,6 +1492,9 @@ class _$_RefreshToken with DiagnosticableTreeMixin implements _RefreshToken {
     TResult? Function(String key, Token? token)? saveToken,
     TResult? Function()? authenticate,
     TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
   }) {
     return refreshToken?.call();
   }
@@ -1360,6 +1510,9 @@ class _$_RefreshToken with DiagnosticableTreeMixin implements _RefreshToken {
     TResult Function(String key, Token? token)? saveToken,
     TResult Function()? authenticate,
     TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
     required TResult orElse(),
   }) {
     if (refreshToken != null) {
@@ -1379,6 +1532,9 @@ class _$_RefreshToken with DiagnosticableTreeMixin implements _RefreshToken {
     required TResult Function(_SaveToken value) saveToken,
     required TResult Function(_Authenticate value) authenticate,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
   }) {
     return refreshToken(this);
   }
@@ -1394,6 +1550,9 @@ class _$_RefreshToken with DiagnosticableTreeMixin implements _RefreshToken {
     TResult? Function(_SaveToken value)? saveToken,
     TResult? Function(_Authenticate value)? authenticate,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
   }) {
     return refreshToken?.call(this);
   }
@@ -1409,6 +1568,9 @@ class _$_RefreshToken with DiagnosticableTreeMixin implements _RefreshToken {
     TResult Function(_SaveToken value)? saveToken,
     TResult Function(_Authenticate value)? authenticate,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
     required TResult orElse(),
   }) {
     if (refreshToken != null) {
@@ -1423,11 +1585,574 @@ abstract class _RefreshToken implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$_FirstNameChangedCopyWith<$Res> {
+  factory _$$_FirstNameChangedCopyWith(
+          _$_FirstNameChanged value, $Res Function(_$_FirstNameChanged) then) =
+      __$$_FirstNameChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? firstName});
+}
+
+/// @nodoc
+class __$$_FirstNameChangedCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_FirstNameChanged>
+    implements _$$_FirstNameChangedCopyWith<$Res> {
+  __$$_FirstNameChangedCopyWithImpl(
+      _$_FirstNameChanged _value, $Res Function(_$_FirstNameChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? firstName = freezed,
+  }) {
+    return _then(_$_FirstNameChanged(
+      freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_FirstNameChanged
+    with DiagnosticableTreeMixin
+    implements _FirstNameChanged {
+  const _$_FirstNameChanged(this.firstName);
+
+  @override
+  final String? firstName;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.firstNameChanged(firstName: $firstName)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.firstNameChanged'))
+      ..add(DiagnosticsProperty('firstName', firstName));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_FirstNameChanged &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, firstName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_FirstNameChangedCopyWith<_$_FirstNameChanged> get copyWith =>
+      __$$_FirstNameChangedCopyWithImpl<_$_FirstNameChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
+  }) {
+    return firstNameChanged(firstName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
+  }) {
+    return firstNameChanged?.call(firstName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
+    required TResult orElse(),
+  }) {
+    if (firstNameChanged != null) {
+      return firstNameChanged(firstName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
+  }) {
+    return firstNameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
+  }) {
+    return firstNameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
+    required TResult orElse(),
+  }) {
+    if (firstNameChanged != null) {
+      return firstNameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirstNameChanged implements AuthEvent {
+  const factory _FirstNameChanged(final String? firstName) =
+      _$_FirstNameChanged;
+
+  String? get firstName;
+  @JsonKey(ignore: true)
+  _$$_FirstNameChangedCopyWith<_$_FirstNameChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_LastNameChangedCopyWith<$Res> {
+  factory _$$_LastNameChangedCopyWith(
+          _$_LastNameChanged value, $Res Function(_$_LastNameChanged) then) =
+      __$$_LastNameChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? lastName});
+}
+
+/// @nodoc
+class __$$_LastNameChangedCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_LastNameChanged>
+    implements _$$_LastNameChangedCopyWith<$Res> {
+  __$$_LastNameChangedCopyWithImpl(
+      _$_LastNameChanged _value, $Res Function(_$_LastNameChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? lastName = freezed,
+  }) {
+    return _then(_$_LastNameChanged(
+      freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_LastNameChanged
+    with DiagnosticableTreeMixin
+    implements _LastNameChanged {
+  const _$_LastNameChanged(this.lastName);
+
+  @override
+  final String? lastName;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.lastNameChanged(lastName: $lastName)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.lastNameChanged'))
+      ..add(DiagnosticsProperty('lastName', lastName));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_LastNameChanged &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, lastName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_LastNameChangedCopyWith<_$_LastNameChanged> get copyWith =>
+      __$$_LastNameChangedCopyWithImpl<_$_LastNameChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
+  }) {
+    return lastNameChanged(lastName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
+  }) {
+    return lastNameChanged?.call(lastName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
+    required TResult orElse(),
+  }) {
+    if (lastNameChanged != null) {
+      return lastNameChanged(lastName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
+  }) {
+    return lastNameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
+  }) {
+    return lastNameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
+    required TResult orElse(),
+  }) {
+    if (lastNameChanged != null) {
+      return lastNameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LastNameChanged implements AuthEvent {
+  const factory _LastNameChanged(final String? lastName) = _$_LastNameChanged;
+
+  String? get lastName;
+  @JsonKey(ignore: true)
+  _$$_LastNameChangedCopyWith<_$_LastNameChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_CompleteProfileCopyWith<$Res> {
+  factory _$$_CompleteProfileCopyWith(
+          _$_CompleteProfile value, $Res Function(_$_CompleteProfile) then) =
+      __$$_CompleteProfileCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_CompleteProfileCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_CompleteProfile>
+    implements _$$_CompleteProfileCopyWith<$Res> {
+  __$$_CompleteProfileCopyWithImpl(
+      _$_CompleteProfile _value, $Res Function(_$_CompleteProfile) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_CompleteProfile
+    with DiagnosticableTreeMixin
+    implements _CompleteProfile {
+  const _$_CompleteProfile();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.completeProfile()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AuthEvent.completeProfile'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_CompleteProfile);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phone) phoneChanged,
+    required TResult Function(String? countryCode) countryCodeChanged,
+    required TResult Function() verifyPhone,
+    required TResult Function(String? otp) otpChanged,
+    required TResult Function() verifyOtp,
+    required TResult Function(String key, Token? token) saveToken,
+    required TResult Function() authenticate,
+    required TResult Function() refreshToken,
+    required TResult Function(String? firstName) firstNameChanged,
+    required TResult Function(String? lastName) lastNameChanged,
+    required TResult Function() completeProfile,
+  }) {
+    return completeProfile();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String phone)? phoneChanged,
+    TResult? Function(String? countryCode)? countryCodeChanged,
+    TResult? Function()? verifyPhone,
+    TResult? Function(String? otp)? otpChanged,
+    TResult? Function()? verifyOtp,
+    TResult? Function(String key, Token? token)? saveToken,
+    TResult? Function()? authenticate,
+    TResult? Function()? refreshToken,
+    TResult? Function(String? firstName)? firstNameChanged,
+    TResult? Function(String? lastName)? lastNameChanged,
+    TResult? Function()? completeProfile,
+  }) {
+    return completeProfile?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phone)? phoneChanged,
+    TResult Function(String? countryCode)? countryCodeChanged,
+    TResult Function()? verifyPhone,
+    TResult Function(String? otp)? otpChanged,
+    TResult Function()? verifyOtp,
+    TResult Function(String key, Token? token)? saveToken,
+    TResult Function()? authenticate,
+    TResult Function()? refreshToken,
+    TResult Function(String? firstName)? firstNameChanged,
+    TResult Function(String? lastName)? lastNameChanged,
+    TResult Function()? completeProfile,
+    required TResult orElse(),
+  }) {
+    if (completeProfile != null) {
+      return completeProfile();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhoneChanged value) phoneChanged,
+    required TResult Function(_CountryCodeChanged value) countryCodeChanged,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_OtpChanged value) otpChanged,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_SaveToken value) saveToken,
+    required TResult Function(_Authenticate value) authenticate,
+    required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CompleteProfile value) completeProfile,
+  }) {
+    return completeProfile(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhoneChanged value)? phoneChanged,
+    TResult? Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult? Function(_VerifyPhone value)? verifyPhone,
+    TResult? Function(_OtpChanged value)? otpChanged,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_SaveToken value)? saveToken,
+    TResult? Function(_Authenticate value)? authenticate,
+    TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_FirstNameChanged value)? firstNameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CompleteProfile value)? completeProfile,
+  }) {
+    return completeProfile?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhoneChanged value)? phoneChanged,
+    TResult Function(_CountryCodeChanged value)? countryCodeChanged,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_OtpChanged value)? otpChanged,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_SaveToken value)? saveToken,
+    TResult Function(_Authenticate value)? authenticate,
+    TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CompleteProfile value)? completeProfile,
+    required TResult orElse(),
+  }) {
+    if (completeProfile != null) {
+      return completeProfile(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CompleteProfile implements AuthEvent {
+  const factory _CompleteProfile() = _$_CompleteProfile;
+}
+
+/// @nodoc
 mixin _$AuthState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
   bool get isTokenExpired => throw _privateConstructorUsedError;
   String? get countryCode => throw _privateConstructorUsedError;
+  String? get firstName => throw _privateConstructorUsedError;
+  String? get lastName => throw _privateConstructorUsedError;
   String? get phone => throw _privateConstructorUsedError;
   String? get otp => throw _privateConstructorUsedError;
   Token? get accessToken => throw _privateConstructorUsedError;
@@ -1454,6 +2179,8 @@ abstract class $AuthStateCopyWith<$Res> {
       bool isError,
       bool isTokenExpired,
       String? countryCode,
+      String? firstName,
+      String? lastName,
       String? phone,
       String? otp,
       Token? accessToken,
@@ -1488,6 +2215,8 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
     Object? isError = null,
     Object? isTokenExpired = null,
     Object? countryCode = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
     Object? phone = freezed,
     Object? otp = freezed,
     Object? accessToken = freezed,
@@ -1514,6 +2243,14 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
       countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
               as String?,
       phone: freezed == phone
           ? _value.phone
@@ -1627,6 +2364,8 @@ abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
       bool isError,
       bool isTokenExpired,
       String? countryCode,
+      String? firstName,
+      String? lastName,
       String? phone,
       String? otp,
       Token? accessToken,
@@ -1664,6 +2403,8 @@ class __$$_AuthStateCopyWithImpl<$Res>
     Object? isError = null,
     Object? isTokenExpired = null,
     Object? countryCode = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
     Object? phone = freezed,
     Object? otp = freezed,
     Object? accessToken = freezed,
@@ -1690,6 +2431,14 @@ class __$$_AuthStateCopyWithImpl<$Res>
       countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
               as String?,
       phone: freezed == phone
           ? _value.phone
@@ -1739,6 +2488,8 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       required this.isError,
       required this.isTokenExpired,
       required this.countryCode,
+      required this.firstName,
+      required this.lastName,
       required this.phone,
       required this.otp,
       required this.accessToken,
@@ -1757,6 +2508,10 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
   final bool isTokenExpired;
   @override
   final String? countryCode;
+  @override
+  final String? firstName;
+  @override
+  final String? lastName;
   @override
   final String? phone;
   @override
@@ -1778,7 +2533,7 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthState(isLoading: $isLoading, isError: $isError, isTokenExpired: $isTokenExpired, countryCode: $countryCode, phone: $phone, otp: $otp, accessToken: $accessToken, refreshToken: $refreshToken, expiredToken: $expiredToken, verification: $verification, auth: $auth, error: $error, authOption: $authOption)';
+    return 'AuthState(isLoading: $isLoading, isError: $isError, isTokenExpired: $isTokenExpired, countryCode: $countryCode, firstName: $firstName, lastName: $lastName, phone: $phone, otp: $otp, accessToken: $accessToken, refreshToken: $refreshToken, expiredToken: $expiredToken, verification: $verification, auth: $auth, error: $error, authOption: $authOption)';
   }
 
   @override
@@ -1790,6 +2545,8 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       ..add(DiagnosticsProperty('isError', isError))
       ..add(DiagnosticsProperty('isTokenExpired', isTokenExpired))
       ..add(DiagnosticsProperty('countryCode', countryCode))
+      ..add(DiagnosticsProperty('firstName', firstName))
+      ..add(DiagnosticsProperty('lastName', lastName))
       ..add(DiagnosticsProperty('phone', phone))
       ..add(DiagnosticsProperty('otp', otp))
       ..add(DiagnosticsProperty('accessToken', accessToken))
@@ -1813,6 +2570,10 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
                 other.isTokenExpired == isTokenExpired) &&
             (identical(other.countryCode, countryCode) ||
                 other.countryCode == countryCode) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.otp, otp) || other.otp == otp) &&
             (identical(other.accessToken, accessToken) ||
@@ -1836,6 +2597,8 @@ class _$_AuthState with DiagnosticableTreeMixin implements _AuthState {
       isError,
       isTokenExpired,
       countryCode,
+      firstName,
+      lastName,
       phone,
       otp,
       accessToken,
@@ -1859,6 +2622,8 @@ abstract class _AuthState implements AuthState {
           required final bool isError,
           required final bool isTokenExpired,
           required final String? countryCode,
+          required final String? firstName,
+          required final String? lastName,
           required final String? phone,
           required final String? otp,
           required final Token? accessToken,
@@ -1878,6 +2643,10 @@ abstract class _AuthState implements AuthState {
   bool get isTokenExpired;
   @override
   String? get countryCode;
+  @override
+  String? get firstName;
+  @override
+  String? get lastName;
   @override
   String? get phone;
   @override

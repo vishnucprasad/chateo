@@ -21,4 +21,8 @@ abstract class IAuthRepo {
   );
   Future<Either<AuthFailure, User>> authenticate();
   Future<Either<AuthFailure, Token>> refreshToken();
+  Future<Either<AuthFailure, User>> completeProfile(
+    String? firstName,
+    String? lastName,
+  );
 }

@@ -358,6 +358,91 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             },
           );
         },
+        firstNameChanged: (_FirstNameChanged value) {
+          emit(
+            state.copyWith(firstName: value.firstName),
+          );
+        },
+        lastNameChanged: (_LastNameChanged value) {
+          emit(
+            state.copyWith(
+              lastName: value.lastName,
+            ),
+          );
+        },
+        completeProfile: (_CompleteProfile value) async {
+          emit(
+            state.copyWith(
+              isLoading: true,
+              isError: false,
+              isTokenExpired: false,
+              expiredToken: null,
+              error: null,
+              authOption: none(),
+            ),
+          );
+
+          final Either<AuthFailure, User> profileOption =
+              await _authRepo.completeProfile(
+            state.firstName,
+            state.lastName,
+          );
+
+          profileOption.fold(
+            (l) {
+              l.map(
+                clientFailure: (value) {
+                  return state.copyWith(
+                    isLoading: false,
+                    isError: true,
+                    isTokenExpired: false,
+                    error: value.message,
+                    authOption: some(left(l)),
+                  );
+                },
+                serverFailure: (value) {
+                  return state.copyWith(
+                    isLoading: false,
+                    isError: true,
+                    isTokenExpired: false,
+                    error: value.message,
+                    authOption: some(left(l)),
+                  );
+                },
+                tokenFailure: (value) {
+                  emit(
+                    state.copyWith(
+                      isLoading: false,
+                      isError: false,
+                      isTokenExpired: true,
+                      expiredToken: value.token,
+                      authOption: some(left(l)),
+                    ),
+                  );
+
+                  _refreshEvent = const AuthEvent.completeProfile();
+                  add(const AuthEvent.refreshToken());
+                },
+              );
+            },
+            (r) {
+              emit(
+                state.copyWith(
+                  isLoading: false,
+                  isError: false,
+                  isTokenExpired: false,
+                  error: null,
+                  auth: Auth(
+                    accessToken: state.accessToken?.token,
+                    refreshToken: state.refreshToken?.token,
+                    user: r,
+                  ),
+                  authOption: some(right(r)),
+                ),
+              );
+            },
+          );
+        },
       );
       print(state.toString());
     });

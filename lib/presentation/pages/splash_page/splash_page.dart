@@ -2,6 +2,7 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:chateo/application/auth/auth_bloc.dart';
+import 'package:chateo/domain/core/constants.dart';
 import 'package:chateo/domain/core/injection/injectable.dart';
 import 'package:chateo/presentation/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,9 @@ class SplashPage extends StatelessWidget {
       }
     });
     return BlocListener<AuthBloc, AuthState>(
-      listenWhen: (previous, current) => previous.auth != current.auth,
+      listenWhen: (previous, current) =>
+          previous.auth != current.auth ||
+          previous.expiredToken != current.expiredToken,
       listener: (context, state) async {
         if (state.auth != null &&
             state.auth!.user != null &&
@@ -43,7 +46,10 @@ class SplashPage extends StatelessWidget {
           return await context.router.replaceAll([const HomeRoute()]);
         }
 
-        return await context.router.replaceAll([const StartRoute()]);
+        if (state.expiredToken != null &&
+            state.expiredToken?.type == TokenType.refreshToken) {
+          return await context.router.replaceAll([const StartRoute()]);
+        }
       },
       child: Scaffold(
         body: Center(
