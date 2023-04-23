@@ -29,11 +29,25 @@ class OtpInputPage extends StatelessWidget {
                 previous.auth != current.auth ||
                 current.error != previous.error,
             listener: (context, state) {
+              final bool? isProfileCompleted =
+                  state.auth?.user?.isProfileCompleted;
+
               if (state.isError == false &&
-                  state.verification?.status == 'approved') {
+                  state.verification?.status == 'approved' &&
+                  isProfileCompleted != null &&
+                  !isProfileCompleted) {
                 context.router.replaceAll([
                   const StartRoute(),
                   const ProfileCompletionRoute(),
+                ]);
+              }
+
+              if (state.isError == false &&
+                  state.verification?.status == 'approved' &&
+                  isProfileCompleted != null &&
+                  isProfileCompleted) {
+                context.router.replaceAll([
+                  const HomeRoute(),
                 ]);
               }
 

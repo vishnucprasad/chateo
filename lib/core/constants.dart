@@ -41,7 +41,7 @@ const kWidth50 = SizedBox(
   width: 50,
 );
 
-const kBaseUrl = "http://10.0.2.2:3000/api/v1";
+const kBaseUrl = "http://192.168.27.218:3000/api/v1";
 
 SnackBar showErrorSnackBar({
   required String? errorMessage,
