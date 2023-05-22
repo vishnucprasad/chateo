@@ -67,6 +67,7 @@ flutter:
     - assets/images/dark.png
     - assets/images/light.png
     - assets/images/chateo.png
+    - assets/images/blank-avatar.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

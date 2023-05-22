@@ -24,8 +24,8 @@ class AccountSection extends StatelessWidget {
           width: 50,
           decoration: BoxDecoration(
             image: const DecorationImage(
-              image: NetworkImage(
-                'https://firebasestorage.googleapis.com/v0/b/vishnucprasad-c4e9f.appspot.com/o/profile%2Fvishnucprasad.jpg?alt=media&token=8c8e136f-b098-4995-8384-91fa34c63fdb',
+              image: AssetImage(
+                'assets/images/blank-avatar.jpg',
               ),
             ),
             borderRadius: BorderRadius.circular(20),

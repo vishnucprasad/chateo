@@ -70,15 +70,16 @@ class ContactsScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(14),
                         image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://instagram.fcok1-1.fna.fbcdn.net/v/t51.2885-15/338388018_2201060350084178_5289291198886151654_n.webp?stp=dst-jpg_e35&_nc_ht=instagram.fcok1-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=bnKuVx27Rj8AX9zJGz4&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzA2OTkyMDIyNTE3MzI0OTc1Mw%3D%3D.2-ccb7-5&oh=00_AfD4WBZAj5F5n-vW5rg_Z6INv4aiGO1sKXhEbrwP2c_UcA&oe=64496A4E&_nc_sid=1527a3'),
+                          image: AssetImage(
+                            'assets/images/blank-avatar.jpg',
+                          ),
                         ),
                       ),
                     ),
                     title: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('Megha Mol'),
+                        Text('Chateo User'),
                         kHeight,
                       ],
                     ),
