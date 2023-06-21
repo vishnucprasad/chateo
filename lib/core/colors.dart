@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const primaryColor = Color(0xff002DE3);
 const lightColor = Color(0xffFFFFFF);
 const darkColor = Color(0xff0F1828);
-const secondaryLightColor = Color(0xffF7F7FC);
+const secondaryLightColor = Color(0xffF1F1F1);
 const secondaryDarkColor = Color(0xff152033);
 const greyColor = Color(0xffADB5BD);
 

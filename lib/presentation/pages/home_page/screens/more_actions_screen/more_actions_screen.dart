@@ -8,9 +8,6 @@ class MoreActionsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Brightness currentBrightness =
-        MediaQuery.of(context).platformBrightness;
-    final bool isDarkMode = currentBrightness == Brightness.dark;
     final TextStyle? titleText = Theme.of(context).textTheme.titleLarge;
 
     return SafeArea(

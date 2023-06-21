@@ -36,6 +36,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
+  flutter_contacts: ^1.1.6
   freezed_annotation: ^2.2.0
   get_it: ^7.2.0
   google_fonts: ^4.0.3
@@ -43,6 +44,7 @@ dependencies:
   json_annotation: ^4.8.0
   json_serializable: ^6.6.1
   pinput: ^2.2.31
+  scrollable_positioned_list: ^0.3.8
   shared_preferences: ^2.1.0
 
 dev_dependencies:

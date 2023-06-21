@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:chateo/core/colors.dart';
 import 'package:chateo/core/constants.dart';
+import 'package:chateo/presentation/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -136,6 +138,9 @@ class ChatScreen extends StatelessWidget {
             child: ListView.separated(
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
+                    onTap: () {
+                      context.router.push(const ChatRoute());
+                    },
                     leading: Container(
                       height: 50,
                       width: 50,
